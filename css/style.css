@@ -1,0 +1,217 @@
+
+/* ---------   Font Family   -------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+
+/* ---------   icon link   -------- */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.min.css');
+
+
+
+/* ========================   all variable start here   ======================== */
+:root {
+    /* ---------  color variable   -------- */
+    --primary-color: #2bcbba;
+    --light-color: #d1d8e0;
+    --grey-color: #687080;
+    --red-color: #ff4757;
+    --white-color: #fff;
+    --white-medium: #f1f2f6;
+    --dark-color: #212121;
+    
+    
+    /* ---------   font family   -------- */
+    --primary-font: 'Montserrat', sans-serif;
+    --second-font: 'Prata',serif;
+    
+    /* ---------   font size   -------- */
+    --low-font: 13px;
+    --xs-font: 14px;
+    --sm-font: 15px;
+    --md-font: 17px;
+    --lg-font: 20px;
+    --xl-font: 25px;
+    --2xl-font: 30px;
+    --3xl-font: 35px;
+    
+    
+    /* ---------  transition   -------- */
+     --transition-color: color .3s;
+     --transition-background: background .3s;
+     --transition-border: border .3s;
+     --transition-transform: transform .3s;
+     
+     --box-shadow: 0px 3px 8px 0px rgb(0 0 0 /9%);
+     --fw-600: 600;
+     
+     --border-1: 1px solid #f3f3f3;
+}
+
+
+
+
+/* ========================   Global Css Start Here   ======================== */
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*,::after,::before{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--primary-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+input,textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    font: inherit;
+}
+input[type=checkbox],input[type=radio]{
+    width: auto;
+}
+button{
+    border: none;
+    outline: none;
+    font: inherit;
+}
+
+strong{
+    font-weight: var(--fw600);
+}
+
+h1,h2,h3,h4{
+    font-family: var(--second-font);
+    font-weight: 400;
+    line-height: normal;
+}
+
+h1{
+    font-size: var(--3xl-font);
+}
+h2{
+    font-size: var(--2xl-font);
+}
+h3{
+    font-size: var(--xl-font);
+}
+h4{
+    font-size: var(--lg-font);
+}
+h5_{
+    font-size: var(--md-font);
+}
+p{
+    font-size: var(--sm-font);
+}
+/* ========================   Global Css End Here   ======================== */
+
+
+
+
+
+/* ========================  Global Class Start Here   ======================== */
+.container{
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.text-center{
+    text-align: center;
+    margin: 0 auto;
+}
+.text-right{
+    text-align: right;
+    margin-left: auto;
+}
+.w-50{
+    width: 50%;
+}
+
+/* ---------   Flex Class   -------- */
+.flex-center,.flex-center-20,.flex-center-25,.flex-start{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+}
+.flex-center-20{
+    gap:20px;
+}
+.flex-center-25{
+    gap:25px;
+}
+.flex-start{
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.flex-wrap{
+    flex-wrap: wrap;
+    align-items: center;
+}
+.flex-column-15,.flex-column-20,.flex-column-25{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flex-column-15{
+    gap: 15px;
+}
+.flex-column-20{
+    gap: 20px;
+}
+.flex-column-25{
+    gap: 25px;
+}
+
+/* ========================  Global Class End Here   ======================== */
+
+
+
+/* ------------  animation  -------------- */
+@keyframes fade-bottom{
+    0%{
+        opacity: 0;
+        transform:  translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform:  translateY(0px);
+    }
+}
