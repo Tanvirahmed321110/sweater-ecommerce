@@ -1,0 +1,10 @@
+.guide-item-content .cart-p{
+    padding: 0 10px;
+}
+.guide-item-content.flex-column-15{
+    gap: 10px;
+}
+.guide-item-content .cart-title{
+    font-weight: 600;
+    font-family: var(--primary-font);
+}

@@ -3,9 +3,7 @@
     height: calc(100vh - 100px);
   }
 
-.slider-top{
-    margin-top: 25px;
-}
+
 
 .slider-item{
     position: relative;
