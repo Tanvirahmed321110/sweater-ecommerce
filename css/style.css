@@ -83,6 +83,8 @@ a{
 img{
     display: block;
     max-width: 100%;
+    object-fit: cover; 
+    object-position: center;
 }
 
 ul{
@@ -158,6 +160,22 @@ p{
     width: 50%;
 }
 
+
+.btn-fill,.btn-outline{
+    padding: 7px 15px;
+    font-weight: 600;
+    font-size: var(--sm-font);
+    text-align: center;
+    border-radius: 4px;
+}
+.btn-fill{
+    background-color: black;
+    color: var(--white-color);
+}
+.btn-outline{
+    border: 1px solid black;
+}
+
 /* ---------   Flex Class   -------- */
 .flex-center,.flex-center-20,.flex-center-25,.flex-start{
     display: flex;
@@ -213,5 +231,16 @@ p{
     100%{
         opacity: 1;
         transform:  translateY(0px);
+    }
+}
+
+@keyframes fade-left{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    1000%{
+        opacity: 1;
+        transform: translateX(0px);
     }
 }

@@ -127,27 +127,35 @@ header i{
 .header-nav-menu > ul > li:hover .header-dropdown{
     display: block;
 }
-
-
-
-
 .header-content-area{
     position: relative;
 }
-.header-mega-dropdown{
-    position: absolute;
-    top: 40px;
-    left: -375px;
-    padding: 30px 15px;
-    box-shadow: var(--box-shadow);
-    width: 1200px;
-    z-index: 5;
+
+.header-right i:hover,.header-left i:hover{
+    color: var(--primary-color);
 }
+
 
 
 
 
 /*===============   Mega Dropdown item start  =============== */
+
+.header-mega-dropdown{
+    position: absolute;
+    top: 35px;
+    left: -375px;
+    padding: 30px 15px;
+    box-shadow: var(--box-shadow);
+    width: 1200px;
+    z-index: 5;  
+    display: none;
+    animation: fade-bottom .3s linear;
+    background-color: var(--white-color);
+}
+
+
+
 .header-mega-dropdown-area.flex-between{
     gap: 25px;
 }
@@ -165,15 +173,35 @@ header i{
 .mega-dropdown-item.flex-column-15{
     gap: 10px;
 }
+
+/* mega-dropdown-img */
+.mega-dropdown-item-image{
+    overflow: hidden;
+    transition: all .4s  linear;
+    position: relative;
+}
+
 .mega-dropdown-item img{
     border: var(--border-1);
-    padding: 2px;
+    padding: 2px;  
+}
+.mega-dropdown-hide-img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .4s  linear;   
+     transform: scale(.8);
+}
+.mega-dropdown-item-image:hover .mega-dropdown-hide-img img{
+    z-index: 2;
+    transform: scale(1);
+    transition: all .4s  linear;
+    /* width: calc(100% - 22px);
+    height: calc(100% - 22px); */
 }
 
 /* mega-dropdown-discount */
-.mega-dropdown-item-image{
-    position: relative;
-}
+
 .mega-dropdown-item .mega-dropdown-discount{
     position: absolute;
     bottom: 40px;
@@ -201,6 +229,7 @@ header i{
     transform: translateX(-50%);
     z-index: 2;
     visibility: hidden;
+    transition: all .3s linear;
 }
 .mega-dropdown-item .mega-dropdown-hide-icons a{
     background-color: var(--white-color);
@@ -237,6 +266,7 @@ header i{
 
 .mega-dropdown-item-header h5{
     font-size: var(--sm-font);
+    font-weight: var(--fw-600);
 }
 
 /* mega-dropdown-item-price  */
@@ -246,7 +276,7 @@ header i{
 }
 .mega-dropdown-item-price .new-price{
     color: var(--dark-color);
-    font-weight: var(--fw-600);
+    font-weight: 500;
 }
 
 
@@ -272,7 +302,62 @@ header i{
 .mega-dropdown-navs ul li a:hover{
     border-bottom: 1px solid var(--primary-color);
 }
+.mega-dropdown:hover .header-mega-dropdown{
+    display: block;
+    transform: translateY(0);
+    transition: all .3s linear;
+    z-index: 3;
+}
 
+
+
+/*================   Search Input  =============== */
+.search{
+    /* position: fixed;
+    top: -25px;
+    left: 0;
+    right: 0; */
+    height: 80px;
+    display: none;
+    animation: fade-bottom .4s linear;
+}
+.search.active{
+    display: block;
+}
+.search-content-area{
+    position: relative;
+}
+.search-content-area form input{
+    padding: 12px;
+    padding-left: 35px;
+    border: var(--border-1);
+    width: 100%;
+    border-radius: 5px;
+}
+.search-content-area form input::placeholder{
+    padding-left: 30px;
+}
+.search-content-area form i{
+    position: absolute;
+    left: 10px;
+    top: 8px;
+}
+#search-input-close{
+    position: absolute;
+    right: 10px;
+    top:6px;
+    padding: 2px 10px;  
+    border-radius: 3px;
+    border: var(--border-1);
+}
+#search-input-close:active{
+    border: 1px solid var(--primary-color);
+}
+
+/* mobile-menu */
+.mobile-menu{
+    display: none;
+}
 
 
 /*===============   Header Responsive  =============== */
@@ -287,4 +372,127 @@ header i{
     .header-center nav{
         display: none;
     }
+    
+    
+    
+    .mega-dropdown-navs{
+        width: 30%;
+    }
+    .mega-dropdown-navs.flex-start{
+        flex-wrap: wrap;
+    }
+    
+    
+    /*===============   mobile-menu   ==============*/
+    .mobile-menu{
+        display: block;
+    }
+    .mobile-menu-content-area{
+        padding: 25px ;
+        background-color: var(--white-color);
+        box-shadow: var(--box-shadow);
+        z-index: 5;
+        height: 100vh;
+        width: 300px;
+        overflow-y: auto;
+        margin-right: 25px;
+        overflow-x: none;
+    }
+    .mobile-navs-wraper.flex-column-15{
+        align-items: flex-start;
+    }
+    .mobile-menu-content-area ul li {
+        position: relative;
+    }
+    .mobile-menu-content-area ul li  i{
+        font-size: var(--sm-font);
+    }
+    .mobile-navs-wraper li{
+        width: 100%;
+    }
+    
+    
+    /*=========== special dropdown and mega dropdown start here ==============*/
+    #menu-bar a:hover{
+        transition: all .3s linear;
+        transform: rotate(360deg);
+    }
+    #mobile-menu{
+        display: none;
+        transform: translateX(-100px);
+        transition: .5s linear;
+        animation: fade-left .1s linear;
+    }
+    #mobile-menu.active{
+        transform: translateX(0px);
+        display: block;
+        transition: .5s linear;
+        animation: fade-left .1s linear;
+    }
+    .mobile-menu-content-area{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .modile-dropdown-navs,.mobile-mega-dropdown-navs{
+        padding-left: 35px;
+        animation: fade-bottom .3s linear ;
+        display: none;
+    }
+    /* active class */
+    .modile-dropdown-navs.active,.mobile-mega-dropdown-navs.active{
+        display: block;
+        animation: fade-bottom .3s linear ;
+    }
+    .arrow{
+        transition: all .3s linear;
+    }
+   .arrow.active{
+        transform: rotate(180deg);
+        transition: all .3s linear;
+    }
+    
+    
+    .mobile-dropdown,.mobile-mega-drop-area{
+        display: block;
+        width: 100%;
+        height: 122px;
+    }
+    .mobile-dropdown li a ,.mobile-mega-drop-area li a{
+        font-size: var(--xs-font);
+    }
+    .mobile-dropdown li a:hover ,.mobile-mega-drop-area li a:hover{
+        border-bottom: var(--border-1);
+        color: var(--primary-color);
+    }
+    
+    .mobile-mega-drop-area{
+        height: 100%;
+    }
+    .disc:hover .mobile-dropdown{
+        display: block;
+    }
+    .mobile-mega-drop-area{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    /*=========== special dropdown end here ==============*/
+    
+    
+    /* mobile-login-register */
+    .mobile-login-register.flex-column-15{
+        align-items: unset;
+    }
+    .mobile-login-register .btn-fill,.mobile-login-register .btn-outline{
+        width: 100% !important;
+    }
+    /* hover in btn */
+    .mobile-login-register .btn-fill:hover{
+        color: var(--primary-color);
+    }
+    .mobile-login-register .btn-outline:hover{
+        color: var(--grey-color);
+    }
+    
 }
