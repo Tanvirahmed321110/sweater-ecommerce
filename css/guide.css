@@ -121,13 +121,12 @@
 
 
 /* ===================  Form Blog Section Start Here  ===================*/
-.form-blog{
+.from-blog-content-area{
     overflow-x: auto;
 }
-
 .form-blog-items.col-3{
     gap: 30px;
-    width: 1040px;
+    min-width: 1040px;
 }
 .form-blog .btn-outline{
     font-size: var(--xs-font);
@@ -155,15 +154,21 @@
 }
 /* ===================  Form Blog Section End Here  ===================*/
 
-.popular-photos-area.flex-center{
+
+
+/* =========  Popular photos start here  =============== */
+.popular-photos-area .flex-center{
     gap: 0;
 }
 
 .popular-photos{
-    overflow-x: auto;
     padding-bottom: 25px;
 }
 .popular-photos-area{
+    overflow-x: auto;
+    
+}
+.popular-photos-area-inner{
     min-width: 1000px;
 }
 .popular-photos-area div img{
