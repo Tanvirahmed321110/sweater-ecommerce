@@ -8,3 +8,203 @@
     font-weight: 600;
     font-family: var(--primary-font);
 }
+
+
+
+
+
+
+/* ===================  Sweater Section Start Here ================== */
+.sweater-header .text-center.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.sweater-header .text-center{
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    width: 260px;
+    margin: 0 auto;
+    user-select: none;
+}
+.sweater-header .text-center span{
+    font-size: var(--lg-font);
+    padding-bottom: 10px;
+}
+
+
+/* drop down */
+.sweater-header-dropdown{
+    width: 80%;
+    position: absolute;
+    top: 55px;
+    left: 20px;
+    box-shadow: var(--box-shadow);
+    animation: bottomAnimantion .3s linear;
+    display: none;
+    z-index: 2;
+    background-color: white;
+}
+.sweater-header-dropdown.active{
+    display: block;
+}
+
+.sweater-header-dropdown ul li {
+    display: block;
+    text-align: left;
+    padding: 5px 10px;
+    border-top: 1px solid whitesmoke;
+}
+.sweater-header-dropdown li.active{
+    background-color: var(--grey-color);
+    color: var(--light-color);
+}
+.sweater-header-dropdown li:hover{
+    background-color: var(--grey-color);
+    color: var(--light-color);
+}
+
+
+
+
+ /* tshirt */
+ #tshirt{
+    padding: 40px 0;
+ }
+.drop-section.active{
+    display: block;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+/* ===================  Sweater Section End Here  ===================*/
+
+
+
+
+
+
+
+
+/* ===================  Banner Section Start Here  ===================*/
+.banner{
+    height: 500px;
+    background-color: var(--light-color);
+    background-image: url('https://i.ibb.co/y5GXvvc/banner.png');
+    background-size: contain;
+    background-position: 100%;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+.banner-content-area.flex-column-15{
+    height: 500px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+}
+.banner-content-area h1{
+    letter-spacing: .7px;
+}
+.banner-content-area .btn-outline{
+    width: 140px;
+    border: 2px solid var(--dark-color);
+}
+.banner-content-area .btn-outline:hover{
+    border: 2px solid var(--grey-color);
+    color: var(--grey-color);
+}
+/* ===================  Banner Section End Here  ===================*/
+
+
+
+
+
+/* ===================  Form Blog Section Start Here  ===================*/
+.form-blog{
+    overflow-x: auto;
+}
+
+.form-blog-items.col-3{
+    gap: 30px;
+    width: 1040px;
+}
+.form-blog .btn-outline{
+    font-size: var(--xs-font);
+    padding: 5px 20px;
+    color: var(--red-color);
+    border: 2px solid var(--red-color);
+}
+.form-blog .btn-outline:hover{
+    border: 2px solid var(--dark-color);
+    color: var(--dark-color);
+}
+.form-blog img{
+    width: 100%;
+}
+
+.form-blog .read-more{
+    padding: 25px 0;
+}
+.form-blog .read-more .btn-fill{
+    font-size: var(--xs-font);
+}
+.form-blog .read-more .btn-fill:hover{
+    background-color: var(--red-color);
+}
+/* ===================  Form Blog Section End Here  ===================*/
+
+.popular-photos-area.flex-center{
+    gap: 0;
+}
+.popular-photos{
+    overflow-x: auto;
+}
+.popular-photos-area{
+    min-width: 1000px;
+}
+.popular-photos-area div img{
+    width: 100%;
+}
+
+
+@media(max-width:991px){
+    .banner{
+        background-size: cover;
+        background-position:150px;
+    }
+    .form-blog-items.col-3{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (max-width:769px){
+    .banner{
+        background-size: contain;
+        background-position:150px;
+        height: 400px;
+    }
+    
+    .form-blog-items.col-3{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+
+
+
+
+
+
+
+@keyframes bottomAnimantion{
+    0%{
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+}

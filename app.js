@@ -54,8 +54,49 @@ smallDropBtn.addEventListener('click',()=>{
 })
 
 
-// sliders
 
+
+// sweater dropdown btn
+const sweaterBtn =  document.getElementById('sweater-btn');
+const sweaterDropdown = document.getElementById('sweater-header-dropdown');
+const dropdownItems = document.querySelectorAll('.sweater-header-dropdown ul li');
+
+const sweater = document.getElementById("sweater")
+const hoddy = document.getElementById("hoddy")
+const tshirt = document.getElementById("tshirt")
+const allSections = document.querySelectorAll('drop-section')
+
+
+
+sweaterBtn.addEventListener('click',()=>{
+  sweaterDropdown.classList.toggle('active');
+})
+
+  dropdownItems.forEach((each)=>{
+    each.addEventListener('click', ()=>{
+      dropdownItems.forEach((li)=>li.classList.remove('active'));
+      each.classList.add('active')
+      
+      
+      // sectionContents.forEach((section) => section.classList.remove('active'));
+      allSections.forEach((section)=>section.classList.remove('active'))
+      
+      const targetSectionId = each.dataset.section;
+      const targetSection = document.getElementById(`${targetSectionId}-section`);
+      if (targetSection) {
+        targetSection.classList.add('active');
+    }
+    })
+  })
+
+  
+
+
+
+
+
+
+// sliders home
 const swiper = new Swiper('.slider-top', {
     // Optional parameters
     direction: 'vertical',
@@ -77,4 +118,40 @@ const swiper = new Swiper('.slider-top', {
     scrollbar: {
       el: '.swiper-scrollbar',
     },
+  });
+  
+  
+  
+  // sliders  arrivals
+  const arrivals = new Swiper('.arrivals-bottom', {
+    // Optional parameters
+    spaceBetween: 15,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    // loop: true,
+    speed:1000,
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      481:{
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        centeredSlides:false
+      },
+      769:{
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        centeredSlides:false,
+      },
+      991:{
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        centeredSlides:false
+      },
+    }
+  
   });

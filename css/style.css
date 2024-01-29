@@ -148,6 +148,11 @@ p{
     padding: 0 20px;
     margin: 0 auto;
 }
+.small-container{
+    max-width: 1080px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
 .text-center{
     text-align: center;
     margin: 0 auto;
@@ -196,6 +201,11 @@ section{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 25px;
+}
+.col-4{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
 }
 
 /* btn  */
@@ -288,17 +298,15 @@ section{
 
 
 @media (max-width:991px){
-    .col-3{
+    .col-3,.col-4{
         width: 100%;
         grid-template-columns:repeat(2,1fr);
-        /* justify-content: center;
-        align-items: center; */
         gap: 15px;
         flex-wrap: wrap;
     }
 }
 @media (max-width:480px){
-    .col-3{
+    .col-3,.col-4{
         grid-template-columns:repeat(1,1fr);
         gap: 35px;
     }
