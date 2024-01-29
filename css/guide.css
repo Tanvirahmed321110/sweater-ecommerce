@@ -148,6 +148,7 @@
 }
 .form-blog .read-more .btn-fill{
     font-size: var(--xs-font);
+    background-color: var(--grey-color);
 }
 .form-blog .read-more .btn-fill:hover{
     background-color: var(--red-color);
@@ -157,6 +158,7 @@
 .popular-photos-area.flex-center{
     gap: 0;
 }
+
 .popular-photos{
     overflow-x: auto;
     padding-bottom: 25px;
@@ -169,6 +171,182 @@
 }
 
 
+
+/* =============== contact-form-area  start here ================= */
+.contact-form-area{
+    max-width:600px;
+    margin: 0 auto;
+    width: 100%;
+}
+.contact-header .section-sub-header{
+    font-weight: 500;
+    letter-spacing: .3px;
+    color: var(--grey-color);
+}
+.contact-form-area label{
+    font-weight: 600;
+    font-size: var(--xs-font);
+}
+.contact-form-area input,.contact-form-area textarea{
+    padding: 7px 15px ;
+    border-radius: 25px;
+    background-color: var(--white-medium);
+    border: 1px solid transparent;
+    font-weight: normal;
+}
+.contact-form-area textarea{
+    height: 100px;
+    resize: none;
+}
+.contact-form-area input:focus,.contact-form-area textarea:focus{
+    border: 1px solid var(--light-color);
+}
+.contact-item{
+    width: 100%;
+}
+.contact-form-area .flex-between{
+    gap: 25px;
+}
+
+.contact-form-area .btn-fill{
+    width: 100%;
+    border-radius: 25px;
+    background-color: var(--grey-color);
+    letter-spacing: 1px;
+}
+.contact-form-area .btn-fill:hover{
+    background-color: var(--red-color);
+}
+
+
+/* -------  contact-address  -------*/
+.contact-address{
+    margin-top: 180px;
+    background-color: var(--primary-color);
+    padding: 25px 0;
+    padding-bottom: 50px;
+}
+.contact-address-items{
+    background-color: var(--white-medium);
+    margin-top: -80px;
+}
+.contact-address-items.flex-center{
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 35px;
+    row-gap: 50px;
+}
+.contact-address-item{
+    margin-top: -40px;
+    padding-bottom: 40px;
+}
+.contact-addres-item-icon{
+    background-color: var(--grey-color);
+    padding: 12px;
+    border-radius: 50%;
+}
+.contact-addres-item-icon img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.contact-address-item-data{
+    text-align: center;
+}
+.contact-address-item-data h5{
+    font-size: var(--md-font);
+    word-spacing: 5px;
+    letter-spacing: .4px;
+    color: var(--grey-color);
+}
+.contact-address-item-data P{
+    font-weight: 500;
+    font-size: var(--xs-font);
+    color: var(--grey-color);
+}
+/* =============== contact-form-area  end here ================= */
+
+
+
+
+/* =============== client say area  start here ================= */
+
+.clients-say-items.col-3{
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+.client-say-item{
+    text-align: center;
+}
+
+/* client say header part  */
+.client-say-item .client-image{
+    width: 150px;
+    height: 150px;
+}
+.client-say-item .client-image img {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.client-say-item .client-imag-name h5{
+    font-size: var(--lg-font);
+    position: relative;
+    padding-bottom: 10px;
+}
+.client-say-item .client-imag-name h5::after{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 65px;
+    height: 17px;
+    width: 20px;
+    background:var(--grey-color);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+/*  client say item body  */
+.client-say-item-body-data h5{
+    font-size: var(--md-font);
+}
+
+.client-say-item-body{
+    border:1px solid var(--white-medium);
+}
+.client-say-item-body-data{
+    padding: 10px;
+}
+.client-say-item-body-data small,.client-say-item-body-data p{
+    display:block;
+    text-align: left ;
+}
+.client-say-item-body-data.flex-column-20{
+    align-items: flex-start;
+}
+
+
+/*  client say item footer  */
+.client-say-item-footer{
+    background-color: var(--grey-color);
+    padding: 10px ;
+    width: 100%;
+}
+.client-say-item-footer ul.flex-start{
+    gap: 20px;
+}
+.client-say-item-footer ul li i{
+    color: var(--light-color);
+    font-size: var(--lg-font);
+}
+.client-say-item-footer ul li a:hover {
+    color: var(--white-medium);
+    transform: scale(1.2);
+}
+
+
+
 @media(max-width:991px){
     .banner{
         background-size: cover;
@@ -177,6 +355,7 @@
     .form-blog-items.col-3{
         grid-template-columns: repeat(3,1fr);
     }
+    
 }
 
 @media (max-width:769px){
@@ -189,6 +368,19 @@
     .form-blog-items.col-3{
         grid-template-columns: repeat(3,1fr);
     }
+    
+    .client-say-item{
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+        border-top: var(--border-1);
+        padding-top: 30px;
+    }
+    .clients-say-items.col-3{
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
+    }
+        
 }
 
 
