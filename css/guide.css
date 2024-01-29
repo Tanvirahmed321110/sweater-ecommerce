@@ -159,6 +159,7 @@
 }
 .popular-photos{
     overflow-x: auto;
+    padding-bottom: 25px;
 }
 .popular-photos-area{
     min-width: 1000px;
