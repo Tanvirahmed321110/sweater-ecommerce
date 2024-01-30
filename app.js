@@ -138,14 +138,44 @@ const swiper = new Swiper('.slider-top', {
   
   
   
+  // image change 
+  function changeImage(event) {
+    const bigImgae = document.getElementById('product-big-image')
+    const smallImages = document.querySelectorAll('.product-small-images img')
+    
+    smallImages.forEach(eachImage =>eachImage.classList.remove('active'))
+    const clickedImage = event.target;
+    clickedImage.classList.add('active')
+    
+    bigImgae.src = clickedImage.src
+  }
+  
+  
+  
+  // product-size
+  const productSizes = [...document.getElementsByClassName('product-size')];
+  
+  productSizes.forEach((item,index)=>{
+    item.addEventListener('click',()=>{
+      productSizes.forEach((clild,index)=>{
+        clild.classList.remove('active')
+      })
+      item.classList.add('active')
+    })
+  })
+  console.log(productSizes)
+  
+
+  
+  
+  
+  
   
   
 // sweater dropdown btn
 const sweaterBtn =  document.getElementById('sweater-btn');
 const sweaterDropdown = document.getElementById('sweater-header-dropdown');
 const dropdownItems = document.querySelectorAll('.sweater-header-dropdown ul li');
-
-
 
 sweaterBtn.addEventListener('click',()=>{
   sweaterDropdown.classList.toggle('active');
