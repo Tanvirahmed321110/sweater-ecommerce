@@ -151,6 +151,23 @@ const swiper = new Swiper('.slider-top', {
   }
   
   
+  const shareBoxCloseBtn = document.getElementById('share-box-close');
+const shareBox = document.getElementById('share-box');
+const shareItems = document.getElementById('share-items');
+// const body = document.body;
+
+shareBoxCloseBtn.addEventListener('click', () => {
+    shareBox.style.display = 'none';
+});
+
+shareItems.addEventListener('click', () => {
+    shareBox.style.display = 'block';
+    // body.appendChild(shareBox); // Append shareBox to the body
+});
+
+// You can add additional functionality or styling as needed
+
+  
   
   // product-size
   const productSizes = [...document.getElementsByClassName('product-size')];
@@ -167,9 +184,29 @@ const swiper = new Swiper('.slider-top', {
   
 
   
+  // product quantity
+  const quantityMinus = document.getElementById('quantity-minus');
+  const quantityPlus = document.getElementById('quantity-plus');
   
+  const updateQuantity = (button, plusOrMinus) => {
+      const quantityInput = document.getElementById('quantity-input');
   
+      button.addEventListener('click', () => {
+          let quantityVal = parseInt(quantityInput.value);
   
+          if (plusOrMinus === 'plus' && quantityVal<5) {
+              quantityInput.value = ++quantityVal;
+          } else if (plusOrMinus === 'minus' && quantityVal > 0) {
+              quantityInput.value = --quantityVal;
+          }
+      });
+  };
+  
+  updateQuantity(quantityPlus, 'plus');
+  updateQuantity(quantityMinus, 'minus');
+  
+
+
   
   
 // sweater dropdown btn

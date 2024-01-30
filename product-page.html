@@ -383,7 +383,7 @@
             <!--============== product section start here =============== -->
             <section>
                 <div class="product">
-                    <div class="container">
+                    <div class="small-container">
                         <div class="product-content-area flex-between">
                             <!-- ----------   product image area start  ----------- -->
                             <div class="product-image flex-center w-50">
@@ -439,14 +439,81 @@
                                         </div>
                                         <!-- product size -->
                                         <div class="product-sizes flex-center">
-                                            <div class="product-size">S</div>
+                                            <div class="product-size active">S</div>
                                             <div class="product-size">M</div>
                                             <div class="product-size">L</div>
                                             <div class="product-size">XL</div>
                                         </div>
                                         <!-- product stock -->
-                                        <div class="product-stock">
-                                            <strong>155 <span>in stock</span> <span></span></strong>
+                                        <div class="product-stock flex-center">
+                                            <strong>155  </strong>
+                                            <span>in stock</span>
+                                            <span><i class="ri-checkbox-circle-line"></i></span>
+                                        </div>
+                                        <!-- quintity buy and share -->
+                                        <div class="quintity-buy-share  w-100">
+                                            <div class="quintity-buy-share-area flex-column-15">
+                                                <!-- quintity and add to cart -->
+                                                <div class="product-quintity-buy flex-between">
+                                                    <div class="product-quintity flex-center ">
+                                                        <button id="quantity-plus">+</button>
+                                                        <input id="quantity-input" type="number" min="0" max="5" value="1">
+                                                        <button id="quantity-minus">-</button>
+                                                    </div>
+                                                    <div class="add-to-cart">
+                                                        <button class="btn-outline">Add To Cart</button>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- buy now -->
+                                                <div class="buy-now">
+                                                    <a href="#" class="btn-fill">BUY NOW</a>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- --------- share wishlist question ans  start --------- -->
+                                            <div class="share-wishlist flex-start">
+                                                <div class="wishlist">
+                                                    <span><i class="ri-heart-line"></i></span>
+                                                    <p>Add To WishList</p>
+                                                </div>
+                                                <div class="compare">
+                                                    <span><i class="ri-arrow-left-right-fill"></i></span>
+                                                    <p>Compare</p>
+                                                </div>
+                                                <div id="share-items" class="share">
+                                                    <span><i class="ri-share-forward-line"></i></span>
+                                                    <p>Share</p>
+                                                    <!-- share hid box  -->
+                                                </div>
+                                                <div class="ask">
+                                                    <span><i class="ri-question-line"></i></span>
+                                                    <p>Ask Question</p>
+                                                </div>
+                                            </div>
+                                            <!-- share wishlist question ans  end-->
+                                            <div id="share-box" class="share-box flex-column-15 w-100">
+                                                <div class="close-icon w-100"><i  id="share-box-close" class="ri-close-line"></i></div>
+                                                <div class="share-link w-100">
+                                                    <p>Copy link</p>
+                                                    <div class="flex-between">
+                                                        <input disabled type="text"value='https://chat.openai.1212Qs'>
+                                                        <div class="text-right"><i class="ri-file-copy-line"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="share-icons flex-column-15">
+                                                    <div><p>Share</p></div>
+                                                    <div>
+                                                        <ul class="flex-start">
+                                                            <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+                                                            <li><a href="#"><i class="ri-whatsapp-line"></i></a></li>
+                                                            <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+                                                            <li><a href="#"><i class="ri-youtube-line"></i></a></li>
+                                                            <li><a href="#"><i class="ri-twitter-line"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

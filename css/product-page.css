@@ -25,7 +25,7 @@
 .product-content-area.flex-between{
     gap: 50px;
 }
-/* ------  product image ------ */
+/* --------  product image -------- */
 .product-image.flex-center{
     align-items: start;
     justify-content: start;
@@ -52,7 +52,7 @@
 
 
 
-/* ------  product details ------ */
+/* --------  product details -------- */
 .product-details-area p,.product-details-area a{
     font-size: var(--xs-font);
 }
@@ -112,10 +112,8 @@
 }
 
 
-/* ------  product color ------ */
-.product-colors{
-    
-}
+
+/* --------  product color -------- */
 .product-colors .product-color{
     height: 39px;
     width: 39px;
@@ -135,19 +133,21 @@
     width: 31px;
 }
 .product-colors .product-color .red{
-    background-color: red;
+    background-color: var(--primary-color);
 }
 .product-colors .product-color .gray{
-    background-color: gray;
+    background-color: var(--light-color);
 }
 .product-colors .product-color .blue{
-    background-color: blueviolet;
+    background-color: var(--red-color);
 }
 .product-colors .product-color .orange{
     background-color: orange;
 }
 
-/* ------  product sizes ------ */
+
+
+/* --------  product sizes -------- */
 .product-sizes .product-size{
     height: 35px;
     width: 35px;
@@ -165,5 +165,193 @@
 .product-sizes .product-size.active{
     background-color: var(--dark-color);
     color: white;
+}
+
+
+
+
+/* ----------  product stock  ---------- */
+.product-stock.flex-center{
+    gap: 8px;
+}
+.product-stock strong{
+    font-weight: 600;
+    font-size: var(--xs-font);
+}
+.product-stock span{
+    color: var(--grey-color);
+    font-size: var(--xs-font);
+}
+
+
+
+
+/* ---------- quintity buy and share   ---------- */
+.quintity-buy-share{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.product-quintity-buy{
+    width: 100%;
+}
+.product-quintity-buy .product-quintity{
+    background-color: var(--white-medium);
+}
+.product-quintity-buy.flex-between{
+    gap: 25px;
+    justify-content: flex-start;
+}
+.product-quintity-buy .product-quintity.flex-center{
+    gap: 5px;
+    justify-content: flex-start;
+}
+.product-quintity-buy .product-quintity{
+    width: fit-content;
+}
+.product-quintity-buy .product-quintity button{
+    padding: 6px 20px;
+    background-color: inherit;
+    font-weight: 600;
+    font-size: var(--md-font);
+}
+.product-quintity-buy .product-quintity button:hover{
+    background-color: var(--dark-color);
+    color: white;
+    cursor:pointer;
+}
+.product-quintity-buy .product-quintity input{
+    background-color: inherit;
+    padding: 5px 7px;
+    width: 45px;
+    padding-left: 8px;
+    font-weight: 600;
+}
+
+
+/*---------- add-to-cart ----------*/
+.product-quintity-buy .add-to-cart{
+    flex-grow: 1;
+}
+.product-quintity-buy .add-to-cart .btn-outline{
+    width: 100%;
+    background-color: transparent;
+    border-radius: 0;
+    border: 2px solid var(--dark-color);
+}
+.product-quintity-buy .add-to-cart .btn-outline:hover{
+    background-color: var(--grey-color);
+    color: var(--white-color);
+    border: 2px solid var(--grey-color);
+}
+
+/*---------- buy button -----------*/
+.quintity-buy-share-area .buy-now{
+    width: 100%;
+}
+.quintity-buy-share-area .buy-now .btn-fill{
+    padding: 10px 15px;
+}
+.quintity-buy-share-area .buy-now .btn-fill:hover{
+    background-color: var(--grey-color);
+}
+
+
+
+/* --------  share-wishlist  --------*/
+.share-wishlist .wishlist,.share-wishlist .ask,.share-wishlist .share,.share-wishlist .compare{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    transition: color .1s linear;
+}
+.share-wishlist.flex-start{
+    gap: 20px;
+}
+.share-wishlist p{
+    font-size: var(--xs-font);
+}
+.share-wishlist span i{
+    font-size: var(--lg-font);
+}
+.share-wishlist .wishlist:hover,.share-wishlist .ask:hover,.share-wishlist .share:hover,.share-wishlist .compare:hover{
+    color: var(--primary-color);
+}
+
+
+
+/* -------- share hide iocn -------- */
+.product-content-area .flex-column-15,.product-content-area .flex-column-20,.product-content-area .flex-column-25{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.quintity-buy-share{
+    position: relative;
+}
+.share-box{
+    z-index: 6;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: var(--xs-font);
+    width: 400px;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.share-box i{
+    cursor: pointer;
+    font-size: var(--lg-font);
+}
+.share-box .share-link input{
+    background-color: var(--white-medium);
+    margin-top: 5px;
+    z-index: -1;
+}
+.share-link  i{
+    display: inline-block;
+    margin-left: -57px;
+    margin-top: 5px;
+    z-index: 1 ;
+    padding-right: 5px;
+}
+.share-link i:active{
+    color: var(--primary-color);
+}
+.share-box .close-icon {
+    display: block;
+    text-align: right;
+    cursor: pointer;
+    font-size: var(--lg-font);
+}
+.share-box .close-icon i{
+    padding: 4px;
+    border: var(--border-1);
+    border-radius: 2px;
+}
+.share-box .close-icon i:active{
+    border: 1px solid var(--primary-color);
+}
+
+/*---------- share-icons -----------*/
+.share-icons.flex-column-15{
+    gap: 0px;
+}
+.share-icons ul{
+    padding-left: 10px;
+}
+.share-icons ul i{
+    color: var(--grey-color);
+}
+.share-icons ul i:hover{
+    color: var(--primary-color);
+}
+.share-icons ul.flex-start{
+    gap: 20px;
 }
 /* =============  Product Section end Here  ============== */
