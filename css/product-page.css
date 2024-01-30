@@ -1,0 +1,149 @@
+
+/* height: fitcontent */
+/* =============  Britcamps Section Start Here  ============== */
+.britcamps-content-area ul.flex-start{
+    gap: 10px;
+}
+.britcamps-content-area ul li a{
+    color: var(--primary-color);
+    font-size: var(--xs-font);
+}
+.britcamps-content-area ul li a:hover{
+    color: var(--grey-color);
+}
+.britcamps-content-area ul li:last-child a{
+    color: var(--grey-color);
+}
+/* =============  Britcamps Section End Here  ============== */
+
+
+
+
+
+/* =============  Product Section start Here  ============== */
+
+.product-content-area.flex-between{
+    gap: 50px;
+}
+/* ------  product image ------ */
+.product-image.flex-center{
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+.product-small-images{
+    width: 80px;
+    height: 600px;
+    overflow: hidden;
+}
+.product-small-images.flex-column-15{
+    gap: 2px;
+}
+.product-small-images img{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border:var(--border-1);
+    padding: 2px;
+}
+.product-small-images img.active{
+    border: 1px solid var(--primary-color);
+}
+
+
+
+/* ------  product details ------ */
+.product-details-area p,.product-details-area a{
+    font-size: var(--xs-font);
+}
+.product-details-top.flex-column-25{
+    align-items: start;
+}
+.product-details-top{
+    width: 100%;
+}
+.product-details-area{
+}
+
+.product-name h3.section-header{
+    text-align: left;
+    font-size: var(--2xl-font);
+}
+
+
+/* product- rating price */
+.price-rating .product-rating div a{
+    border-bottom: 1px solid var(--primary-color);  
+    height: 20px;
+}
+.product-price .old-price h5{
+    font-size: var(--md-font);
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: line-through;
+}
+.new-price{
+    position: relative;
+}
+.new-price::after{
+    position: absolute;
+    content: '';
+    background-color: var(--primary-color);
+    width: 2px;
+    height: 50px;
+    right: -15px;
+    top:-8px;
+    transform: skew(-23deg);
+}
+.price-rating .product-price.flex-center{
+    gap: 35px;
+}
+.product-price .old-price span{
+    background-color:var(--grey-color);
+    display: block;
+    padding: 0px 2px;
+    text-align: center;
+    font-size: var(--low-font);
+    border-radius: 3px;
+    color: var(--white-medium);
+    margin-top: -2px;
+    margin-left: -8px;
+    width: 45px;
+}
+
+
+/* ------  product color ------ */
+.product-colors{
+    
+}
+.product-colors .product-color{
+    height: 39px;
+    width: 39px;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-colors .product-color.active{
+    border: 2px solid var(--dark-color);
+}
+.product-colors .red,.product-colors .gray,.product-colors .blue,.product-color .orange{
+    border-radius: 50%;
+    height: 31px;
+    width: 31px;
+}
+.product-colors .product-color .red{
+    background-color: red;
+}
+.product-colors .product-color .gray{
+    background-color: gray;
+}
+.product-colors .product-color .blue{
+    background-color: blueviolet;
+}
+.product-colors .product-color .orange{
+    background-color: orange;
+}
+/* =============  Product Section end Here  ============== */

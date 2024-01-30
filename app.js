@@ -56,43 +56,8 @@ smallDropBtn.addEventListener('click',()=>{
 
 
 
-// sweater dropdown btn
-const sweaterBtn =  document.getElementById('sweater-btn');
-const sweaterDropdown = document.getElementById('sweater-header-dropdown');
-const dropdownItems = document.querySelectorAll('.sweater-header-dropdown ul li');
-
-const sweater = document.getElementById("sweater")
-const hoddy = document.getElementById("hoddy")
-const tshirt = document.getElementById("tshirt")
-const allSections = document.querySelectorAll('drop-section')
-
-
-
-sweaterBtn.addEventListener('click',()=>{
-  sweaterDropdown.classList.toggle('active');
-})
-
-  dropdownItems.forEach((each)=>{
-    each.addEventListener('click', ()=>{
-      dropdownItems.forEach((li)=>li.classList.remove('active'));
-      each.classList.add('active')
-      
-      
-      // sectionContents.forEach((section) => section.classList.remove('active'));
-      allSections.forEach((section)=>section.classList.remove('active'))
-      
-      const targetSectionId = each.dataset.section;
-      const targetSection = document.getElementById(`${targetSectionId}-section`);
-      if (targetSection) {
-        targetSection.classList.add('active');
-    }
-    })
-  })
-
   
-
-
-
+  
 
 
 
@@ -119,6 +84,21 @@ const swiper = new Swiper('.slider-top', {
       el: '.swiper-scrollbar',
     },
   });
+  
+  
+  
+  // color add 
+  const productColors = document.querySelectorAll('.product-colors .product-color');
+  productColors.forEach((color)=>color.addEventListener('click',(event)=>{
+    const clickedColor = event.currentTarget;
+    
+    productColors.forEach(color=>color.classList.remove('active'))
+    
+    clickedColor.classList.add('active')
+    
+  }))
+  
+  
   
   
   
@@ -155,3 +135,35 @@ const swiper = new Swiper('.slider-top', {
     }
   
   });
+  
+  
+  
+  
+  
+// sweater dropdown btn
+const sweaterBtn =  document.getElementById('sweater-btn');
+const sweaterDropdown = document.getElementById('sweater-header-dropdown');
+const dropdownItems = document.querySelectorAll('.sweater-header-dropdown ul li');
+
+
+
+sweaterBtn.addEventListener('click',()=>{
+  sweaterDropdown.classList.toggle('active');
+})
+
+  dropdownItems.forEach((each)=>{
+    each.addEventListener('click', ()=>{
+      dropdownItems.forEach((li)=>li.classList.remove('active'));
+      each.classList.add('active')
+      
+      
+      // sectionContents.forEach((section) => section.classList.remove('active'));
+      allSections.forEach((section)=>section.classList.remove('active'))
+      
+      const targetSectionId = each.dataset.section;
+      const targetSection = document.getElementById(`${targetSectionId}-section`);
+      if (targetSection) {
+        targetSection.classList.add('active');
+    }
+    })
+  })
