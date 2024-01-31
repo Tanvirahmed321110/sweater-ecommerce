@@ -151,22 +151,33 @@ const swiper = new Swiper('.slider-top', {
   }
   
   
+  // share box hide an show
   const shareBoxCloseBtn = document.getElementById('share-box-close');
-const shareBox = document.getElementById('share-box');
-const shareItems = document.getElementById('share-items');
-// const body = document.body;
+  const shareBox = document.getElementById('share-box');
+  const shareItems = document.getElementById('share-items');
+  // const body = document.body;
 
-shareBoxCloseBtn.addEventListener('click', () => {
-    shareBox.style.display = 'none';
-});
+  shareBoxCloseBtn.addEventListener('click', () => {
+      shareBox.style.display = 'none';
+  });
 
-shareItems.addEventListener('click', () => {
-    shareBox.style.display = 'block';
-    // body.appendChild(shareBox); // Append shareBox to the body
-});
+  shareItems.addEventListener('click', () => {
+      shareBox.style.display = 'block';
+  });
 
-// You can add additional functionality or styling as needed
-
+  
+  // ask-quesiton box hide and show
+  const askQBoxBtn = document.getElementById('ask-box-close')
+  const askQBox = document.getElementById('ask-q-box')
+  const askItems = document.getElementById('ask-items')
+  
+  
+  askQBoxBtn.addEventListener('click',()=>{
+    askQBox.style.display='none'
+  })
+  askItems.addEventListener('click',()=>{
+    askQBox.style.display='block'
+  })
   
   
   // product-size

@@ -48,6 +48,8 @@
 }
 .product-small-images img.active{
     border: 1px solid var(--primary-color);
+    transition: .12s;
+    padding: 5px;
 }
 
 
@@ -61,8 +63,6 @@
 }
 .product-details-top{
     width: 100%;
-}
-.product-details-area{
 }
 
 .product-name h3.section-header{
@@ -289,6 +289,7 @@
 .quintity-buy-share{
     position: relative;
 }
+
 .share-box{
     z-index: 6;
     background-color: white;
@@ -302,6 +303,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    border: var(--border-1);
+    display: none;
+}
+
+/* active class  */
+.share-box.active{
+    animation: fade-bottom .3s linear ;
+    display: none;
+}
+.share-box.active-2{
+    animation: fade-bottom .3s linear ;
+    display: block;
 }
 
 .share-box i{
@@ -329,16 +342,20 @@
     cursor: pointer;
     font-size: var(--lg-font);
 }
-.share-box .close-icon i{
+.share-box .close-icon i,.ask-question-hide .close-icon i{
     padding: 4px;
     border: var(--border-1);
     border-radius: 2px;
+    cursor: pointer;
 }
-.share-box .close-icon i:active{
+.share-box .close-icon i:active,.ask-question-hide .close-icon i:active{
     border: 1px solid var(--primary-color);
 }
 
 /*---------- share-icons -----------*/
+.share-icons{
+    padding-top: 25px;
+}
 .share-icons.flex-column-15{
     gap: 0px;
 }
@@ -354,4 +371,132 @@
 .share-icons ul.flex-start{
     gap: 20px;
 }
+
+
+
+
+/* ---------- ask question hide content area ----------- */
+.ask-question-hide{
+    box-shadow: var(--box-shadow);
+    border: var(--border-1);
+    padding: 10px;
+    width: 280px;
+    position: absolute;
+    background-color: var(--white-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: var(--border-1);
+    display: none;
+}
+.ask-question-hide input,.ask-question-hide textarea{
+    border: 1px solid var(--light-color);
+    margin-top: 10px;
+    font-size: var(--xs-font);
+    resize: none;
+}
+.ask-question-hide textarea{
+    height: 140px
+}
+.ask-question-hide .close-icon{
+    text-align: right;
+}
+.ask-question-hide input:focus,.ask-question-hide textarea:focus{
+    border: 1px solid var(--grey-color);
+}
+.ask-question-hide .btn-fill:hover{
+    background-color: var(--grey-color);
+}
+
+
+/* -----------   shipping-return   -------------- */
+.shipping-return{
+    font-size: var(--xs-font);
+    padding-top: 10px;
+}
+.shipping-return p{
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.shipping-return p i{
+    font-size: var(--lg-font);
+}
+.shipping-return p span{
+    color: var(--grey-color);
+    font-weight: 400;
+    padding-left: 2px;
+    
+}
 /* =============  Product Section end Here  ============== */
+
+
+
+
+
+
+
+
+
+
+/* =============  product-details-bottom start Here  ============== */
+.product-details-bottom{
+    padding-top: 100px;
+}
+
+
+/* -------- product bottomm header --------- */
+.product-details-bottom-header{
+    border-bottom: 1px solid var(--light-color);
+}
+.product-details-bottom-header-area ul.flex-center{
+    gap: 35px;
+}
+.product-details-bottom-header-area ul li a{
+    color: var(--grey-color);
+    font-size: var(--md-font);
+    font-weight: 500;
+}
+
+
+/*---------- product-bottom-items ---------- */
+.product-bottom-items{
+    padding-top: 25px;
+    font-size: var(--xs-font);
+}
+.product-bottom-items p{
+    font-size: var(--xs-font);
+}
+.product-bottom-items .flex-column-15{
+    align-items: flex-start;
+}
+
+/* product-bottom-details */
+.product-bottom-details h5.section-header{
+    text-align: left;
+    font-weight: 500;
+    font-size: var(--xl-font);
+}
+.product-bottom-details .first-details.flex-column-15{
+    gap: 10px;
+}
+
+.item-detils-ul-wraper.flex-between{
+    justify-content: space-around;
+    gap: 50px;
+}
+.item-detils-ul-wraper h5{
+    font-size: var(--md-font);
+}
+.item-detils-ul-wraper .flex-column-15{
+    gap: 10px;
+    min-width: 25%;
+}
+.item-detils-ul-wraper ul{
+    padding-left: 20px;
+    list-style:disc;
+}
+.item-detils-ul-wraper-last{
+    list-style:square !important;
+}

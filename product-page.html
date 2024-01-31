@@ -363,7 +363,7 @@
         <menu>
             <!--============== britcam section start here =============== -->
             <section>
-                <div class="container">
+                <div class="small-container">
                     <div class="britcamps">
                         <div class="britcamps-content-area">
                             <ul class="flex-start">
@@ -486,12 +486,31 @@
                                                     <p>Share</p>
                                                     <!-- share hid box  -->
                                                 </div>
-                                                <div class="ask">
+                                                <div id="ask-items" class="ask">
                                                     <span><i class="ri-question-line"></i></span>
                                                     <p>Ask Question</p>
                                                 </div>
                                             </div>
-                                            <!-- share wishlist question ans  end-->
+                                            <!-- ----- share wishlist question ans  end------- -->
+                                            
+                                            
+                                            <!----------hide content ask question hide content--------- -->
+                                            <div id="ask-q-box" class="ask-question-hide">
+                                                <div class="close-icon w-100"><i  id="ask-box-close" class="ri-close-line"></i></div>
+                                                <div>
+                                                    <form action="#">
+                                                        <input type="text" placeholder="name">
+                                                        <input type="email" placeholder="email">
+                                                        <textarea name="" id="" cols="30" rows="10" placeholder="Your question is..."></textarea>
+                                                    </form>
+                                                    <div>
+                                                        <a href="#" class="btn-fill">SUBMIT</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <!----------- hide content  ask question hide content start--------- -->
                                             <div id="share-box" class="share-box flex-column-15 w-100">
                                                 <div class="close-icon w-100"><i  id="share-box-close" class="ri-close-line"></i></div>
                                                 <div class="share-link w-100">
@@ -505,7 +524,7 @@
                                                     <div><p>Share</p></div>
                                                     <div>
                                                         <ul class="flex-start">
-                                                            <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+                                                            <li><a href="#"><i class="ri-facebook-circle-line"></i></a></li>
                                                             <li><a href="#"><i class="ri-whatsapp-line"></i></a></li>
                                                             <li><a href="#"><i class="ri-instagram-line"></i></a></li>
                                                             <li><a href="#"><i class="ri-youtube-line"></i></a></li>
@@ -515,11 +534,101 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!----------- hide content  ask question hide content end --------- -->
+                                        
+                                        <!-- quintity-buy-share -->
+                                        <div class="shipping-return ">
+                                            <div>
+                                                <p>
+                                                    <i class="ri-store-3-line"></i> 
+                                                    Free shipping and returns 
+                                                    <span> on order over $1.00</span></p>
+                                            </div>
+                                            <div>
+                                                <p><i class="ri-truck-line"></i>
+                                                    Estmate delavery:
+                                                    <span>10-22-Feb,24</span>
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- ----------   product details area end  ----------- -->
                         </div>
+                            
+                            
+                            
+                            
+                            
+                        <!-- ----------   product details bottom area start  ----------- -->
+                        <div class="product-details-bottom">
+                            <div class="product-details-bottom-area">
+                                <!-- header in product details bottom -->
+                                <div class="product-details-bottom-header">
+                                    <div class="product-details-bottom-header-area">
+                                        <ul class="flex-center">
+                                            <li><a href="#">Product Details</a></li>
+                                            <li><a href="#">Custom</a></li>
+                                            <li><a href="#">Revies</a></li>
+                                            <li><a href="#">Shpping</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- header in product details bottom end -->
+                                
+                                <!-- product bottom items  -->
+                                <div class="product-bottom-items">
+                                    <div class="prodcut-bottom-items-inner">
+                                        <!-- product bottom details start here -->
+                                        <div id="product-bottom-details" class="product-bottom-details flex-column-25">
+                                            <!-- header data in this item -->
+                                            <div class="frist-details flex-column-15">
+                                                <h5 class="section-header">The Sweater in Tosca Gray</h5>
+                                                <p>
+                                                    This item is very good in  ipsum dolor sit amet consectetur adipisicing elit. Assumenda, corporis? Harum adipisci in accusantium, laboriosam iusto, ab nisi quis distinctio voluptatibus nobis aperiam, unde quam eveniet itaque tempore aliquid amet? 
+                                                </p>
+                                                <p> 
+                                                    Mollitia, ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi, deserunt aperiam porro sunt veniam.
+                                                </p>
+                                            </div>
+                                            
+                                            <!-- more data in this item -->
+                                            <div class="item-detils-ul-wraper flex-between w-100">
+                                                <div class="flex-column-15">
+                                                    <h5>What Is this?</h5>
+                                                    <ul>
+                                                        <li>The latest price of Lenovo IdeaPad</li>
+                                                        <li>5 Laptop at best price</li>
+                                                        <li>2 years warranty </li>
+                                                        <li>The Lenovo IdeaPad 1 14AMN7</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="flex-column-15 w-50">
+                                                    <h5>Featers this item.</h5>
+                                                    <ul>
+                                                        <p>
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam porro, quisquam quam excepturi corrupti odit earum! Aut, sed temporibus. 
+                                                        </p>
+                                                    </ul>
+                                                </div>
+                                                <div class="flex-column-15">
+                                                    <h5>What is the price </h5>
+                                                    <ul class="item-detils-ul-wraper-last">
+                                                        <li>Dynamic Island</li>
+                                                        <li>HDR display</li>
+                                                        <li>2 years warranty </li>
+                                                        <li>The Lenovo IdeaPad 1 14AMN7</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- product bottom details end here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ----------   product details bottom area end  ----------- -->
                     </div>
                 </div>
             </section>
