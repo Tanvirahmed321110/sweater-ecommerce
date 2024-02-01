@@ -26,7 +26,7 @@
     --second-font: 'Prata',serif;
     
     /* ---------   font size   -------- */
-    --low-font: 13px;
+    --low-font: 12px;
     --xs-font: 14px;
     --sm-font: 15px;
     --md-font: 17px;
@@ -221,7 +221,7 @@ section{
 
 /* btn  */
 .btn-fill,.btn-outline{
-    padding: 8px 15px;
+    padding: 7px 15px;
     font-weight: 600;
     font-size: var(--sm-font);
     text-align: center;
@@ -234,8 +234,14 @@ section{
     color: var(--white-color);
 }
 .btn-outline{
-    border: 1px solid black;
+    border: 2px solid black;
 }
+.btn-outline:hover{
+    transition:all .3s;
+    background-color: var(--dark-color);
+    color: var(--white-medium);
+}
+
 
 /* ---------   Flex Class   -------- */
 .flex-center,.flex-center-20,.flex-center-25,.flex-start{

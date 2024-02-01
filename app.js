@@ -99,6 +99,18 @@ const swiper = new Swiper('.slider-top', {
   }))
   
   
+    
+  // product bottom nav 
+  const productBotomNavs = [...document.getElementsByClassName('product-bottom-nav')]
+
+  productBotomNavs.forEach((eachNav,index)=>{
+    eachNav.addEventListener('click',()=>{
+      productBotomNavs.forEach(eachItem =>eachItem.classList.remove('active'))
+      eachNav.classList.add('active')
+    })
+    
+  })
+  
   
   
   
@@ -135,6 +147,8 @@ const swiper = new Swiper('.slider-top', {
     }
   
   });
+  
+
   
   
   
@@ -191,7 +205,7 @@ const swiper = new Swiper('.slider-top', {
       item.classList.add('active')
     })
   })
-  console.log(productSizes)
+
   
 
   

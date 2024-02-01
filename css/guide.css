@@ -148,6 +148,7 @@
 .form-blog .read-more .btn-fill{
     font-size: var(--xs-font);
     background-color: var(--grey-color);
+    width: 150px;
 }
 .form-blog .read-more .btn-fill:hover{
     background-color: var(--red-color);
