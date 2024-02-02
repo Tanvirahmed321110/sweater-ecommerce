@@ -1,0 +1,86 @@
+
+
+.catagory-filter{
+    width: 30%;
+}
+.filter-items.flex-column-15{
+    align-items: flex-start;
+    gap: 25px;
+}
+
+
+.catagory-filter .filter-header h3{
+    font-family: var(--primary-font) !important;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+/* filter-item-header */
+.filter-item-header{
+    cursor: pointer;
+}
+.filter-item-header p,.filter-item-header i{
+    font-weight: 600;
+    padding-right: 6px;
+    font-size: var(--sm-font);
+}
+.filter-item-header spna{
+    transition: .3s;
+}
+#catagory-header span,#brands-header span{
+    transition: .2s linear;
+}
+#catagory-header span.active,#brands-header span.active{
+    transform: rotate(180deg);
+    transition: .3s linear;
+}
+
+
+/* filter-item */
+.filter-item .sizes button{
+    padding: 3px 14px;
+    border: var(--border-1);
+    border-radius: 4px; 
+    margin-right: 5px;
+    background-color: transparent;
+}
+
+/* filter item color */
+.filter-item .colors .color{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: var(--border-1);
+    margin-right: 5px;
+}
+.filter-item .colors .red{
+    background-color: red;
+}
+.filter-item .colors .gray{
+    background-color: gray;
+}
+.filter-item .colors .orange{
+    background-color: orange;
+}
+.filter-item .colors .black{
+    background-color: black;
+}
+
+.filter-item ul{
+    overflow-y: auto;
+    height:300px;
+    display: none;
+    animation: fade-bottom .3s linear;
+}
+.filter-item ul.active{
+    display: block;
+}
+.filter-item ul li a{
+    font-size: var(--xs-font);
+    text-transform: capitalize;
+}
+
+/* price-range */
+.price-range .flex-between{
+    margin-top: -20px;
+}

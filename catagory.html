@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="css/product-page.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/catagory.css">
 </head>
 <body>
     <div class="homg-page">
@@ -363,14 +363,13 @@
         <menu>
             <!--============== britcam section start here =============== -->
             <section>
-                <div class="small-container">
+                <div class="container">
                     <div class="britcamps">
                         <div class="britcamps-content-area">
                             <ul class="flex-start">
                                 <li><a href="#">Home <span> <i class="ri-arrow-right-s-line"></i> </span></a></li>
                                 <li><a href="#">Products <span> <i class="ri-arrow-right-s-line"></i> </span></a></li>
                                 <li><a href="#">Sweater <span><i class="ri-arrow-right-s-line"></i></span></a></li>
-                                <li><a href="#">Top Class Gray Sweater</a></li>
                             </ul>
                         </div>
                     </div>
@@ -380,427 +379,113 @@
             
             
             
-            <!--============== product section start here =============== -->
+            <!--============== catagory section end here =============== -->
             <section>
-                <div class="product">
-                    <div class="small-container">
-                        <div class="product-content-area flex-between">
-                            <!-- ----------   product image area start  ----------- -->
-                            <div class="product-image flex-center w-50">
-                                <!-- small images -->
-                                <div class="product-small-images flex-column-15"  onclick="changeImage(event)">
-                                    <div><img class="active" src="assets/assets/product_01.jpg" alt=""></div>
-                                    <div><img src="assets/assets/product_02.jpg" alt=""></div>
-                                    <div><img src="assets/assets/product_03.jpg" alt=""></div>
-                                    <div><img src="assets/assets/product_04.jpg" alt=""></div>
-                                    <div><img src="assets/assets/product_03b.jpg" alt=""></div>
-                                    <div><img src="assets/assets/product_02b.jpg" alt=""></div>
+                <div class="catagory">
+                    <div class="container">
+                        <div class="catagory-area flex-between w-100">
+                            <div class="catagory-filter">
+                                <div class="filter-header">
+                                    <h3>Filter</h3>
                                 </div>
-                                
-                                <!-- big image in product -->
-                                <div class="product-big-image">
-                                    <div><img id="product-big-image" src="assets/assets/product_01b.jpg" alt=""></div>
-                                </div>
-                            </div>
-                            <!-- ----------   product image area end  ----------- -->
-                            
-                            
-                            <!-- ----------   product details area start  ----------- -->
-                            <div class="product-details w-50">
-                                <div class="product-details-area">
-                                    <div class="product-details-top flex-column-25">
-                                        <div class="product-name">
-                                            <h3 class="section-header">The Sweater in Tosca Gray </h3>
+                                <div class="filter-items flex-column-15 w-100">
+                                    <!-- filter single item start -->
+                                    <div class="filter-item w-100">
+                                        <div class="filter-item-header flex-between">
+                                            <p>Size</p>
                                         </div>
-                                        <!-- price and rating  -->
-                                        <div class="price-rating w-100 flex-between">
-                                            <!-- product price -->
-                                            <div class="product-price flex-center">
-                                                <div class="new-price">
-                                                    <h3>$45.00  </h3>
-                                                </div>
-                                                <div class="old-price">
-                                                    <h5>$65.00</h5>
-                                                    <span>19%</span>
-                                                </div>
-                                            </div>
-                                            <!-- product rating -->
-                                            <div class="product-rating flex-center">
-                                                <div><i class="ri-star-fill"></i> <span>4.7</span></div>
-                                                <div><a href="#">3 Recives</a></div>
-                                            </div>
-                                        </div>
-                                        <!-- product color -->
-                                        <div class="product-colors flex-center">
-                                            <div class="product-color active"> <div class="red"></div></div>
-                                            <div class="product-color"><div class="gray"></div></div>
-                                            <div class="product-color"><div class="orange"></div></div>
-                                            <div class="product-color"><div class="blue"></div></div>
-                                        </div>
-                                        <!-- product size -->
-                                        <div class="product-sizes flex-center">
-                                            <div class="product-size active">S</div>
-                                            <div class="product-size">M</div>
-                                            <div class="product-size">L</div>
-                                            <div class="product-size">XL</div>
-                                        </div>
-                                        <!-- product stock -->
-                                        <div class="product-stock flex-center">
-                                            <strong>155  </strong>
-                                            <span>in stock</span>
-                                            <span><i class="ri-checkbox-circle-line"></i></span>
-                                        </div>
-                                        <!-- quintity buy and share -->
-                                        <div class="quintity-buy-share  w-100">
-                                            <div class="quintity-buy-share-area flex-column-15">
-                                                <!-- quintity and add to cart -->
-                                                <div class="product-quintity-buy flex-between">
-                                                    <div class="product-quintity flex-center ">
-                                                        <button id="quantity-plus">+</button>
-                                                        <input id="quantity-input" type="number" min="0" max="5" value="1">
-                                                        <button id="quantity-minus">-</button>
-                                                    </div>
-                                                    <div class="add-to-cart">
-                                                        <button class="btn-outline">Add To Cart</button>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!-- buy now -->
-                                                <div class="buy-now">
-                                                    <a href="#" class="btn-fill">BUY NOW</a>
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- --------- share wishlist question ans  start --------- -->
-                                            <div class="share-wishlist flex-start">
-                                                <div class="wishlist">
-                                                    <span><i class="ri-heart-line"></i></span>
-                                                    <p>Add To WishList</p>
-                                                </div>
-                                                <div class="compare">
-                                                    <span><i class="ri-arrow-left-right-fill"></i></span>
-                                                    <p>Compare</p>
-                                                </div>
-                                                <div id="share-items" class="share">
-                                                    <span><i class="ri-share-forward-line"></i></span>
-                                                    <p>Share</p>
-                                                    <!-- share hid box  -->
-                                                </div>
-                                                <div id="ask-items" class="ask">
-                                                    <span><i class="ri-question-line"></i></span>
-                                                    <p>Ask Question</p>
-                                                </div>
-                                            </div>
-                                            <!-- ----- share wishlist question ans  end------- -->
-                                            
-                                            
-                                            <!----------hide content ask question hide content--------- -->
-                                            <div id="ask-q-box" class="ask-question-hide">
-                                                <div class="close-icon w-100"><i  id="ask-box-close" class="ri-close-line"></i></div>
-                                                <div>
-                                                    <form action="#">
-                                                        <input type="text" placeholder="name">
-                                                        <input type="email" placeholder="email">
-                                                        <textarea name="" id="" cols="30" rows="10" placeholder="Your question is..."></textarea>
-                                                    </form>
-                                                    <div>
-                                                        <a href="#" class="btn-fill">SUBMIT</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            
-                                            <!----------- hide content  ask question hide content start--------- -->
-                                            <div id="share-box" class="share-box flex-column-15 w-100">
-                                                <div class="close-icon w-100"><i  id="share-box-close" class="ri-close-line"></i></div>
-                                                <div class="share-link w-100">
-                                                    <p>Copy link</p>
-                                                    <div class="flex-between">
-                                                        <input disabled type="text"value='https://chat.openai.1212Qs'>
-                                                        <div class="text-right"><i class="ri-file-copy-line"></i></div>
-                                                    </div>
-                                                </div>
-                                                <div class="share-icons flex-column-15">
-                                                    <div><p>Share</p></div>
-                                                    <div>
-                                                        <ul class="flex-start">
-                                                            <li><a href="#"><i class="ri-facebook-circle-line"></i></a></li>
-                                                            <li><a href="#"><i class="ri-whatsapp-line"></i></a></li>
-                                                            <li><a href="#"><i class="ri-instagram-line"></i></a></li>
-                                                            <li><a href="#"><i class="ri-youtube-line"></i></a></li>
-                                                            <li><a href="#"><i class="ri-twitter-line"></i></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!----------- hide content  ask question hide content end --------- -->
-                                        
-                                        <!-- quintity-buy-share -->
-                                        <div class="shipping-return ">
-                                            <div>
-                                                <p>
-                                                    <i class="ri-store-3-line"></i> 
-                                                    Free shipping and returns 
-                                                    <span> on order over $1.00</span></p>
-                                            </div>
-                                            <div>
-                                                <p><i class="ri-truck-line"></i>
-                                                    Estmate delavery:
-                                                    <span>10-22-Feb,24</span>
-                                                </p>
-                                            </div>
+                                        <div class="sizes">
+                                            <button>S</button>
+                                            <button>M</button>
+                                            <button>L</button>
+                                            <button>XL</button>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- ----------   product details area end  ----------- -->
-                        </div>
-                            
-                            
-                            
-                            
-                            
-                        <!-- ----------   product details bottom area start  ----------- -->
-                        <div class="product-details-bottom">
-                            <div class="product-details-bottom-area">
-                                <!-- header in product details bottom -->
-                                <div class="product-details-bottom-header">
-                                    <div class="product-details-bottom-header-area">
-                                        <ul class="flex-center">
-                                            <li><a class="active product-bottom-nav" href="#">Product Details</a></li>
-                                            <li><a class="product-bottom-nav" href="#">Custom</a></li>
-                                            <li><a class="product-bottom-nav product-bottom-nav-rating" href="#">Revies  <span class="flex-center">3</span></a></li>
-                                            <li><a class="product-bottom-nav" href="#">Shpping</a></li>
+                                    <!-- filter single item end -->
+                                    <!-- filter single item start -->
+                                    <div class="filter-item w-100">
+                                        <div  class="filter-item-header flex-between ">
+                                            <p>Color</p>
+                                        </div>
+                                        <div class="colors">
+                                            <button class="color gray"></button>
+                                            <button class="color red"></button>
+                                            <button class="color black"></button>
+                                            <button class="color orange"></button>
+                                        </div>
+                                    </div>
+                                    <!-- filter single item end -->
+                                    <!-- filter single item start -->
+                                    <div class="filter-item  w-100">
+                                        <div id="catagory-header" class="filter-item-header flex-between">
+                                            <p>Catagoris</p>
+                                            <span><i class="ri-arrow-down-s-line"></i></span>
+                                        </div>
+                                        <ul id="filter-catagoris">
+                                            <li><a href="#">Active</a></li>
+                                            <li><a href="#">Orginal Kit</a></li>
+                                            <li><a href="#">Mens</a></li>
+                                            <li><a href="#">Beauty</a></li>
+                                            <li><a href="#">baby</a></li>
+                                            <li><a href="#">DK</a></li>
+                                            <li><a href="#">soft</a></li>
+                                            <li><a href="#">Sopno</a></li>
+                                            <li><a href="#">women</a></li>
+                                            <li><a href="#">hat</a></li>
+                                            <li><a href="#">body</a></li>
+                                            <li><a href="#">child toy</a></li>
+                                            <li><a href="#">Strong</a></li>
                                         </ul>
                                     </div>
-                                </div>
-                                <!-- header in product details bottom end -->
-                                
-                                <!--  ------------ product bottom items ------------ -->
-                                <div class="product-bottom-items">
-                                    <div class="prodcut-bottom-items-inner">
-                                        <!-- --------product bottom details start here-------- -->
-                                        <div id="product-bottom-details" class="product-bottom-details flex-column-25">
-                                            <!-- header data in this item -->
-                                            <div class="frist-details flex-column-15">
-                                                <h5 class="section-header">The Sweater in Tosca Gray</h5>
-                                                <p>
-                                                    This item is very good in  ipsum dolor sit amet consectetur adipisicing elit. Assumenda, corporis? Harum adipisci in accusantium, laboriosam iusto, ab nisi quis distinctio voluptatibus nobis aperiam, unde quam eveniet itaque tempore aliquid amet? 
-                                                </p>
-                                                <p> 
-                                                    Mollitia, ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quasi, deserunt aperiam porro sunt veniam.
-                                                </p>
-                                            </div>
-                                            
-                                            <!-- more data in this item -->
-                                            <div class="item-detils-ul-wraper flex-between w-100">
-                                                <div class="flex-column-15">
-                                                    <h5>What Is this?</h5>
-                                                    <ul>
-                                                        <li>The latest price of Lenovo IdeaPad</li>
-                                                        <li>5 Laptop at best price</li>
-                                                        <li>2 years warranty </li>
-                                                        <li>The Lenovo IdeaPad 1 14AMN7</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="flex-column-15 w-50">
-                                                    <h5>Featers this item.</h5>
-                                                    <ul>
-                                                        <p>
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam porro, quisquam quam excepturi corrupti odit earum! Aut, sed temporibus. 
-                                                        </p>
-                                                    </ul>
-                                                </div>
-                                                <div class="flex-column-15">
-                                                    <h5>What is the price </h5>
-                                                    <ul class="item-detils-ul-wraper-last">
-                                                        <li>Dynamic Island</li>
-                                                        <li>HDR display</li>
-                                                        <li>2 years warranty </li>
-                                                        <li>The Lenovo IdeaPad 1 14AMN7</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                    <!-- filter single item end -->
+                                    <!-- filter single item start -->
+                                    <div class="filter-item w-100">
+                                        <div  id="brands-header" class="filter-item-header flex-between">
+                                            <p>Brands</p>
+                                            <span><i class="ri-arrow-down-s-line"></i></span>
                                         </div>
-                                        <!-- --------product bottom details end here---------- -->
-                                        
-                                        
-                                        <!-- --------product bottom custom start  here---------- -->
-                                        <div id="product-bottom-custom" class="product-bottom-custom flex-column-25">
-                                            <div class="product-bottom-custom-header ">
-                                                <h5 class="section-sub-header"> OUR CUSTOM SIZE </h5>
-                                            </div>
-                                            <div class="prodcut-custopm-body w-100">
-                                                <div class="">
-                                                    <img src="assets/assets/custom-size.jpg" alt="">
-                                                </div>
-                                            </div>
+                                        <ul id="filter-brands">
+                                            <li><a href="#">Panda</a></li>
+                                            <li><a href="#">zara</a></li>
+                                            <li><a href="#">bata</a></li>
+                                            <li><a href="#">kit kat</a></li>
+                                            <li><a href="#">Lemon</a></li>
+                                            <li><a href="#">DK</a></li>
+                                            <li><a href="#">soft</a></li>
+                                            <li><a href="#">Sopno</a></li>
+                                            <li><a href="#">Lenevo</a></li>
+                                            <li><a href="#">soft</a></li>
+                                            <li><a href="#">Sopno</a></li>
+                                            <li><a href="#">Lenevo</a></li>
+                                            <li><a href="#">Strong</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- filter single item end -->
+                                    <div class="price-range w-100">
+                                        <input type="range" min="10" max="200" value="55">
+                                        <div class="flex-between">
+                                            <p>0$</p>
+                                            <p>155$</p>
                                         </div>
-                                        <!-- --------product bottom custom end   here---------- -->
-                                        
-                                        
-                                        <!-- --------product bottom review end start  here---------- -->
-                                        <div id="product-bottom-review" class="product-bottom-review flex-column-25">
-                                            <!-- product bottom review header -->
-                                            <div class="product-bottom-review-header section-header-area w-100 flex-column-25">
-                                                <div class="flex-start">
-                                                    <h5 class=" section-sub-header flex-start">
-                                                        Rating & Review
-                                                    </h5>
-                                                </div>
-                                                <div class="w-100 flex-between product-bottom-review-header-bottom">
-                                                    <div class="flex-center">
-                                                        <h2>4.7</h2>
-                                                        <span>3 Reviews</span>
-                                                    </div>
-                                                    <div>
-                                                        <a id="open-write-a-review" href="#sd" class="btn-outline">Write a reiview</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                            <!-- product user all  reviews  start here -->
-                                            <div class="product-bottom-user-reviews flex-column-15">
-                                                <!-- user review single item start -->
-                                                <div class="product-bottom-user-review flex-start">
-                                                    <div class="user-review-profile">
-                                                        <img src="assets/assets/blog_01.jpg" alt="">
-                                                    </div>
-                                                    <div class="user-review-data flex-column-15">
-                                                        <div>
-                                                            <div>
-                                                                <h5 class="user-name">Nira JH</h5>
-                                                                <div class="rating">
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                    <span><i class="ri-star-line"></i></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="review-date">
-                                                                <span>On Jan 29, 2024</span>
-                                                            </div>
-                                                        </div>
-                                                        <!-- review text -->
-                                                        <div class="review-text">
-                                                            <h5>Good Product</h4>
-                                                            <p>
-                                                                i was buy this item some day ago ipsum, dolor sit amet consectetur adipisicing elit. Id dolor, cumque necessitatibus rem fugit in ad eius possimus obcaecati, nihil aut nemo harum, molestiae voluptatem temporibus praesentium laudantium unde eligendi. gd
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- user review single item start -->
-                                                <!-- user review single item start -->
-                                                <div class="product-bottom-user-review flex-start">
-                                                    <div class="user-review-profile">
-                                                        <img src="assets/assets/blog_03.jpg" alt="">
-                                                    </div>
-                                                    <div class="user-review-data flex-column-15">
-                                                        <div>
-                                                            <div>
-                                                                <h5 class="user-name">Jasmit Cor</h5>
-                                                                <div class="rating">
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="review-date">
-                                                                <span>On Jan 29, 2024</span>
-                                                            </div>
-                                                        </div>
-                                                        <!-- review text -->
-                                                        <div class="review-text">
-                                                            <h5>Thanks for Seller</h4>
-                                                            <p>
-                                                                 ipsum, dolor sit amet consectetur adipisicing elit. Id dolor, cumque necessitatibus rem fugit in ad eius possimus obcaecati, nihil aut nemo harum, molestiae voluptatem temporibus praesentium laudantium unde eligendi?
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- user review single item start -->
-                                                <!-- user review single item start -->
-                                                <div class="product-bottom-user-review flex-start">
-                                                    <div class="user-review-profile">
-                                                        <img src="assets/assets/blog_02.jpg" alt="">
-                                                    </div>
-                                                    <div class="user-review-data flex-column-15">
-                                                        <div>
-                                                            <div>
-                                                                <h5 class="user-name">Cory Mery</h5>
-                                                                <div class="rating">
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="review-date">
-                                                                <span>On feb 2, 2024</span>
-                                                            </div>
-                                                        </div>
-                                                        <!-- review text -->
-                                                        <div class="review-text">
-                                                            <h5>Nice Product</h4>
-                                                            <p>
-                                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id dolor, cumque necessitatibus rem fugit in ad eius possimus obcaecati, nihil aut nemo harum, molestiae voluptatem temporibus praesentium laudantium unde eligendi?
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- user review single item start -->
-                                                <!-- user review single item start -->
-                                                <div class="product-bottom-user-review flex-start">
-                                                    <div class="user-review-profile">
-                                                        <img src="assets/assets/guide_01.png" alt="">
-                                                    </div>
-                                                    <div class="user-review-data flex-column-15">
-                                                        <div>
-                                                            <div>
-                                                                <h5 class="user-name">Jasmit Cor</h5>
-                                                                <div class="rating">
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                    <span><i class="ri-star-fill"></i></span>
-                                                                    <span><i class="ri-star-line"></i></span>
-                                                                    <span><i class="ri-star-line"></i></span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="review-date">
-                                                                <span>On Jan 21, 2024</span>
-                                                            </div>
-                                                        </div>
-                                                        <!-- review text -->
-                                                        <div class="review-text">
-                                                            <h5>Not good !</h4>
-                                                            <p>
-                                                                this item quality is very bed. ipsum, dolor sit amet consectetur adipisicing elit. Id dolor, cumque necessitatibus rem fugit in ad eius possimus obcaecati, nihil aut nemo harum, molestiae voluptatem temporibus praesentium laudantium unde eligendi?
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- user review single item start -->
-                                            </div>
-                                            <!-- product user all  reviews end here -->
-                                            
-                                        </div>
-                                        <!-- --------product bottom review end   here---------- -->
-                                        
                                     </div>
                                 </div>
                             </div>
+                            <!-- catagory filter area end -->
+                            <div class="catagory-show-items-area">
+                                <div class="catagory-show--items">
+                                    <ul>
+                                        <li><a href="#"><i class="ri-pause-mini-line"></i></a></li>
+                                        <li><a href="#"><i class="ri-align-justify"></i></a></li>
+                                        <li><a href="#"><i class="ri-layout-grid-line"></i></a></li>
+                                        <li><a href="#"><i class="ri-grid-fill"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <!-- ----------   product details bottom area end  ----------- -->
                     </div>
                 </div>
             </section>
-            <!--============== product section end here =============== -->
+            <!--============== catagory section end here =============== -->
             
             
             
@@ -808,7 +493,7 @@
             
             
             <!--============== shopping cart  section start here =============== -->
-            <section>
+            <section class="card">
                 <div class="shopping-cart" id="shopping-cart">
                     <div class="shopping-cart-area ">
                         <div class="shopping-cart-area-header flex-between">
@@ -1078,40 +763,27 @@
         
         
         
-        <!----------hide content write a review  hide content--------- -->
-        <div id="write-a-review" class="write-a-review">
-            <h5 class="section-sub-header">Write a rivew</h5>
-            <div class="close-icon w-100"><i id="write-a-review-close" class="ri-close-line"></i></div>
-            <div>
-                <form action="#" class="flex-column-15 w-100">
-                    <div class="flex-between w-100">
-                        <input type="text" placeholder="name">
-                        <input type="email" placeholder="email">
-                    </div>
-                    <div class="your-review flex-center">
-                        <h5>Your rating is: </h5>
-                        <div class="rating">
-                            <span><i class="ri-star-fill"></i></span>
-                            <span><i class="ri-star-fill"></i></span>
-                            <span><i class="ri-star-fill"></i></span>
-                            <span><i class="ri-star-fill"></i></span>
-                            <span><i class="ri-star-fill"></i></span>
-                        </div>
-                    </div>
-                    <div class="w-100">
-                        <input type="text" placeholder="review-title">
-                    </div>
-                    <div class="w-100"> <textarea name="" id="" cols="30" rows="3" placeholder="Your comment is..."></textarea></div>
-                    
-                    <div class="w-100">
-                        <a href="#" class="btn-fill">SUBMIT</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+        
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
+    
+    <script>
+        const filterCatagoris = document.getElementById('filter-catagoris');
+        const filterBrands = document.getElementById('filter-brands');
+        const brandsHeader = document.getElementById('brands-header')
+        const catagoryHeader = document.getElementById('catagory-header')
+        
+        catagoryHeader.addEventListener('click',()=>{
+            filterCatagoris.classList.toggle('active')
+            const icon= catagoryHeader.querySelector('span')
+            icon.classList.toggle('active')
+        })
+        brandsHeader.addEventListener('click',()=>{
+            filterBrands.classList.toggle('active')
+            const icon= brandsHeader.querySelector('span')
+            icon.classList.toggle('active')
+        })
+    </script>
 </body>
 </html>

@@ -17,6 +17,8 @@ searchInputClose.addEventListener('click',()=>{
 
 
 
+
+
 // mobile menu side bar
 const menuBtn = document.getElementById('menu-bar');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -111,7 +113,29 @@ const swiper = new Swiper('.slider-top', {
     
   })
   
+  // shopping-cart-open
+  const shoppinCartOpen = document.getElementById('shopping-cart-open')
+  const shoppingCart = document.getElementById('shopping-cart')
   
+  shoppinCartOpen.addEventListener('click',()=>{
+    shoppingCart.classList.add('active');
+  })
+  document.getElementById('shopping-cart-close').addEventListener('click',()=>{
+    shoppingCart.classList.remove('active')
+  })
+  
+  
+  // write-a-review
+  const writeReviewBox = document.getElementById('write-a-review')
+  const writeReviewBtn = document.getElementById('open-write-a-review')
+  const closeReviewBoxBtn = document.getElementById('write-a-review-close')
+  
+  writeReviewBtn.addEventListener('click',()=>{
+    writeReviewBox.classList.add('active')
+  })
+  closeReviewBoxBtn.addEventListener('click',()=>{
+    writeReviewBox.classList.remove('active')
+  })
   
   
   // sliders  arrivals
@@ -234,28 +258,3 @@ const swiper = new Swiper('.slider-top', {
 
   
   
-// sweater dropdown btn
-const sweaterBtn =  document.getElementById('sweater-btn');
-const sweaterDropdown = document.getElementById('sweater-header-dropdown');
-const dropdownItems = document.querySelectorAll('.sweater-header-dropdown ul li');
-
-sweaterBtn.addEventListener('click',()=>{
-  sweaterDropdown.classList.toggle('active');
-})
-
-  dropdownItems.forEach((each)=>{
-    each.addEventListener('click', ()=>{
-      dropdownItems.forEach((li)=>li.classList.remove('active'));
-      each.classList.add('active')
-      
-      
-      // sectionContents.forEach((section) => section.classList.remove('active'));
-      allSections.forEach((section)=>section.classList.remove('active'))
-      
-      const targetSectionId = each.dataset.section;
-      const targetSection = document.getElementById(`${targetSectionId}-section`);
-      if (targetSection) {
-        targetSection.classList.add('active');
-    }
-    })
-  })

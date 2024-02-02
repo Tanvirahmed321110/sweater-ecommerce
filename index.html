@@ -259,7 +259,7 @@
                             <ul class="flex-center">
                                 <li><a href="#" id="search-btn"><i class="ri-search-line"></i></a></li>
                                 <li class="item-floating-area">
-                                    <a href="#"><span class="item-floating">9</span><i   class="ri-shopping-bag-line"></i>
+                                    <a href="#" id="shopping-cart-open"><span class="item-floating">9</span><i   class="ri-shopping-bag-line"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -956,9 +956,9 @@
                         <div class="sweater-content-area flex-column-15">
                             <!-- header  start-->
                             <div class="sweater-header section-header-area">
-                                <div class="text-center flex-center" id="sweater-btn">
+                                <div class="text-center flex-center">
                                     <span>in</span>
-                                    <h3 class="section-header">Sweater <i class="ri-arrow-down-s-line"></i></h3>
+                                    <h3  id="sweater-btn" class="section-header">Sweater <i class="ri-arrow-down-s-line"></i></h3>
                                     
                                     <!-- drop down -->
                                     <div class="sweater-header-dropdown" id="sweater-header-dropdown">
@@ -1928,6 +1928,180 @@
                 </div>
             </section>
             <!-- =========== Popular Photos Section End Here ============ -->
+            
+            
+            
+            
+            <!--============== shopping cart  section start here =============== -->
+            <section>
+                <div class="shopping-cart" id="shopping-cart">
+                    <div class="shopping-cart-area ">
+                        <div class="shopping-cart-area-header flex-between">
+                            <h2>Shopping Cart</h2>
+                            <span id="shopping-cart-close">X</span>
+                        </div>
+                        <div class="shopping-cart-body">
+                            <div>
+                                <ul class="shopping-cart-items flex-column-25">
+                                    <!-- shopping cart item start -->
+                                    <li class="w-100">
+                                        <div class="shopping-cart-item flex-between">
+                                            <!-- shopping cart quintity -->
+                                            <div class="shopping-cart-quintity">
+                                                <button>-</button>
+                                                <input type="text" value="1" max="5" min="0">
+                                                <button>+</button>
+                                            </div>
+                                            
+                                            <!-- cart item image -->
+                                            <div class="shopping-cart-image">
+                                                <img src="assets/assets/product_01.jpg" alt="s">
+                                            </div>
+                                            
+                                            <!-- cart item details -->
+                                            <div class="cart-item-details flex-column-15">
+                                                <h5>The Sweater  in Tosca Gray</h5>
+                                                <div>
+                                                    <span>Color</span>
+                                                    <span>Gray</span>
+                                                </div>
+                                                <div>
+                                                    <span>Size</span>
+                                                    <span>L</span>
+                                                </div>
+                                                <div>
+                                                    <h5>$45.00</h5>
+                                                </div>
+                                            </div>
+                                            <!-- close btn -->
+                                            <span class="close-btn">X</span>
+                                        </div>
+                                    </li>
+                                    <!-- shopping cart item start -->
+                                    <!-- shopping cart item end -->
+                                    <li>
+                                        <div class="shopping-cart-item flex-between">
+                                            <!-- shopping cart quintity -->
+                                            <div class="shopping-cart-quintity">
+                                                <button>-</button>
+                                                <input type="text" value="1" max="5" min="0">
+                                                <button>+</button>
+                                            </div>
+                                            
+                                            <!-- cart item image -->
+                                            <div class="shopping-cart-image">
+                                                <img src="assets/assets/product_03.jpg" alt="s">
+                                            </div>
+                                            
+                                            <!-- cart item details -->
+                                            <div class="cart-item-details flex-column-15">
+                                                <h5>The Sweater  in Tosca Gray</h5>
+                                                <div>
+                                                    <span>Color</span>
+                                                    <span>Red</span>
+                                                </div>
+                                                <div>
+                                                    <span>Size</span>
+                                                    <span>M</span>
+                                                </div>
+                                                <div>
+                                                    <h5>$25.00</h5>
+                                                </div>
+                                            </div>
+                                            <!-- close btn -->
+                                            <span class="close-btn">X</span>
+                                        </div>
+                                    </li>
+                                    <!-- shopping cart item start -->
+                                    <!-- shopping cart item end -->
+                                    <li>
+                                        <div class="shopping-cart-item flex-between">
+                                            <!-- shopping cart quintity -->
+                                            <div class="shopping-cart-quintity">
+                                                <button>-</button>
+                                                <input type="text" value="1" max="5" min="0">
+                                                <button>+</button>
+                                            </div>
+                                            
+                                            <!-- cart item image -->
+                                            <div class="shopping-cart-image">
+                                                <img src="assets/assets/product_06.jpg" alt="s">
+                                            </div>
+                                            
+                                            <!-- cart item details -->
+                                            <div class="cart-item-details flex-column-15">
+                                                <h5>The Sweater  in Tosca Gray</h5>
+                                                <div>
+                                                    <span>Color</span>
+                                                    <span>orange</span>
+                                                </div>
+                                                <div>
+                                                    <span>Size</span>
+                                                    <span>XL</span>
+                                                </div>
+                                                <div>
+                                                    <h5>$49.00</h5>
+                                                </div>
+                                            </div>
+                                            <!-- close btn -->
+                                            <span class="close-btn">X</span>
+                                        </div>
+                                    </li>
+                                    <!-- shopping cart item end -->
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- shopping-cart-body end -->
+                        
+                        <!-- ------------ shopping cart total price start ------------- -->
+                        <div class="shopping-cart-total-price">
+                            <div class="shopping-cart-total-price-area">
+                                <div class="coupon-code">
+                                    <div>
+                                        <input type="text" placeholder="Enter Coupon">
+                                        <button>APPLY</button>
+                                    </div>
+                                </div>
+                                <!-- calculation -->
+                                <div class="shopping-cart-caltulation flex-start w-100">
+                                    <div class="flex-between w-100">
+                                        <p>Subtitle</p>
+                                        <p>$45.00</p>
+                                    </div>
+                                    <div class="shipping w-100">
+                                        <p>Shipping</p>
+                                        <ul class="">
+                                            <li class="flex-between">
+                                                <div><input name="shpping" type="radio"><span>Flat</span></div>
+                                                <p>$5.00</p>
+                                            </li>
+                                            <li class="flex-between">
+                                                <div><input name="shpping" type="radio"><span>Free</span></div>
+                                                <p>$0.00</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex-between w-100">
+                                        <p>Discount</p>
+                                        <p>$45.00</p>
+                                    </div>
+                                    <div class="flex-between w-100">
+                                        <p>Tax</p>
+                                        <p>$3.00</p>
+                                    </div>
+                                    <hr class="hr">
+                                    <div class="flex-between w-100">
+                                        <h5>Total</h5>
+                                        <h5>$53.00</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ------------ shopping cart total price End ------------- -->
+                    </div>
+                </div>
+            </section>
+            <!--============== shopping cart  section end here =============== -->
         </menu>
         
         
@@ -2028,5 +2202,23 @@
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
+    <script>
+        // sweater dropdown btn
+        const sweaterBtn =  document.getElementById('sweater-btn');
+        const sweateDrop = document.getElementById('sweater-header-dropdown')
+        const dropdownItems = document.querySelectorAll('.sweater-header-dropdown ul li');
+
+        sweaterBtn.addEventListener('click',()=>{
+        sweateDrop.classList.toggle('active');
+        })
+
+        dropdownItems.forEach((each) => {
+        each.addEventListener('click', () => {
+            dropdownItems.forEach((li) => li.classList.remove('active'));
+            each.classList.add('active');
+        });
+        });
+
+    </script>
 </body>
 </html>

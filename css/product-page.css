@@ -1,23 +1,5 @@
 
 /* height: fitcontent */
-/* =============  Britcamps Section Start Here  ============== */
-.britcamps-content-area ul.flex-start{
-    gap: 10px;
-}
-.britcamps-content-area ul li a{
-    color: var(--primary-color);
-    font-size: var(--xs-font);
-}
-.britcamps-content-area ul li a:hover{
-    color: var(--grey-color);
-}
-.britcamps-content-area ul li:last-child a{
-    color: var(--grey-color);
-}
-/* =============  Britcamps Section End Here  ============== */
-
-
-
 
 
 /* =============  Product Section start Here  ============== */
@@ -596,3 +578,143 @@
 .user-review-data .review-text h5{
     font-size: var(--xs-font);
 }
+
+
+
+/* write-a-review */
+.write-a-review{
+    background-color: var(--white-color);
+    width: 85%;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: var(--box-shadow);
+    padding: 15px;
+    z-index: 5;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    font-size: var(--xs-font);
+}
+.write-a-review.active{
+    display: block;
+}
+.write-a-review .close-icon{
+    text-align: right;
+    margin-bottom: 10px;
+}
+.write-a-review .close-icon i{
+    padding: 3px;
+    border: var(--border-1);
+    cursor: pointer;
+}
+.write-a-review .close-icon i:active{
+    border: 1px solid var(--primary-color);
+}
+.write-a-review .your-review .rating span{
+    cursor: pointer;
+}
+.write-a-review .your-review .rating span:first-child{
+  color: orange;
+}
+.write-a-review form .flex-between{
+    gap: 10px;
+}
+.write-a-review input,.write-a-review textarea{
+    border: var(--border-1);
+    width: 100% ;
+    border-radius: 4px;
+}
+.write-a-review .your-review h5{
+    font-size: var(--md-font);
+    font-weight: 500;
+}
+.write-a-review input:focus,.write-a-review textarea:focus{
+    border:1px solid var(--primary-color);
+}
+.write-a-review form.flex-column-15{
+    align-items: flex-start;
+}
+
+
+
+
+
+/* ===================  Responsive in Product page  ===================== */
+
+@media (max-width:766px){
+    /* britcamp */
+    .britcamps-content-area ul.flex-start {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    
+    /* product data */
+    .product-content-area.flex-between {
+        flex-direction: column;
+    }
+    .product-image.w-50{
+        width: 100%;
+    }
+    .product-image.flex-center {
+        flex-direction: column;
+    }
+    .product-small-images.flex-column-15 {
+        gap: 2px;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+    }
+    .product-big-image{
+        order: 1;
+    }
+    .product-small-images{
+        order: 2;
+    }
+    .product-big-image{
+        margin: 0 auto;
+    }
+    .product-big-image img {
+        max-width: 570px;
+        width: 100%;
+    }
+    
+    
+    /* product-details w-50 */
+    .product-details.w-50{
+        width: 100%;
+    }
+    .price-rating.flex-between{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .share-wishlist.flex-start {
+        flex-wrap: wrap;
+        row-gap: 5px;
+    }
+    
+    .product-quintity-buy.flex-between {
+        flex-direction: column;
+    }
+    .shipping-return p {
+        row-gap: 0;
+        flex-wrap: wrap;
+    }
+    
+    
+    /* product details bottom */
+    .product-details-bottom-header-area ul.flex-center {
+        gap: 15px;
+    }
+    .item-detils-ul-wraper.flex-between {
+        flex-direction: column;
+    }
+}
+
+
+
+
+/* how to shopping cart total in move bottom */

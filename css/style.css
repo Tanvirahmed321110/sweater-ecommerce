@@ -76,6 +76,7 @@ body{
     line-height: 1.8;
     color: var(--dark-color);
     background-color: var(--white-color);
+    overflow-x: hidden;
 }
 
 a{
@@ -111,6 +112,7 @@ button{
     border: none;
     outline: none;
     font: inherit;
+    cursor: pointer;
 }
 
 strong{
@@ -232,6 +234,10 @@ section{
 .btn-fill{
     background-color: black;
     color: var(--white-color);
+    transition: all .3s;
+}
+.btn-fill:hover{
+    background-color: var(--grey-color);
 }
 .btn-outline{
     border: 2px solid black;
@@ -286,6 +292,202 @@ section{
 }
 
 /* ========================  Global Class End Here   ======================== */
+
+
+
+/* ========================  shopping-cart   ======================== */
+.card{
+    overflow-x: hidden;
+}
+.shopping-cart{
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--white-color);
+    box-shadow: var(--box-shadow);
+    border: var(--border-1);
+    position: absolute;
+    right: -100%;
+    top: 0px;
+    z-index: 5;
+    transition: .3s;
+    height: 100dvh;
+}
+.shopping-cart.active{
+    right: 0%;
+}
+.shopping-cart-items.flex-column-25{
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px;
+}
+.shopping-cart-items li{
+    width: 100%;
+}
+
+/* shpping cart header */
+.shopping-cart-area-header{
+    padding-bottom: 50px;
+    padding: 15px;
+}
+.shopping-cart-area-header span{
+    border: var(--border-1);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+    user-select: none;
+}
+.shopping-cart-area-header span:hover{
+    background-color: var(--white-medium);
+}
+.shopping-cart-area-header span:active{
+    border: 1px solid var(--primary-color);
+}
+
+.shopping-cart-item.flex-between{
+    gap: 15px;
+    justify-content: flex-start;
+}
+.shopping-cart span,.shopping-cart p{
+    font-size: var(--xs-font);
+}
+.shopping-cart-item{
+    position: relative;
+}
+
+/* shopping-cart-quintity */
+.shopping-cart-quintity{
+    width: 45px;
+    background-color: var(--white-medium);
+    border-radius: 5px;
+    height: 92px;
+}
+.shopping-cart-quintity button,.shopping-cart-quintity input{
+    width: 100%;
+    background-color: transparent;
+    font-weight: bold;
+    text-align: center;
+    padding: 1px;
+}
+
+.shopping-cart-quintity input{
+    font-weight: 500;
+}
+
+/* shopping-cart-image */
+.shopping-cart-image img{
+    max-width: 100px;
+    width: 100%;
+    height: 92px;
+}
+
+/* cart-item-details */
+.cart-item-details{
+    line-height: 22px;
+}
+.cart-item-details.flex-column-15{
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0px;
+}
+
+/* close btn */
+.shopping-cart-item .close-btn{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 1px 8px;
+    border: var(--border-1);
+    cursor: pointer;
+    user-select: none;
+}
+.shopping-cart-item .close-btn:active {
+    border: 1px solid var(--primary-color);
+}
+
+
+
+
+/* shopping-cart-total-price */
+.shopping-cart-total-price{
+    margin-top: 50px;
+    background-color: var(--white-medium);
+    padding: 15px;
+}
+.coupon-code{
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+.shopping-cart-total-price input{
+    border: 2px solid var(--primary-color);
+}
+
+.coupon-code button{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 6px;
+    height: 97%;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    border: 2px solid var(--primary-color);
+}
+.coupon-code button:hover{
+    background-color: var(--grey-color);
+}
+
+
+/* shipping */
+.shopping-cart-caltulation{
+    padding-top: 25px;
+}
+.shopping-cart-caltulation .shipping ul{
+    padding-left: 15px;
+}
+.shopping-cart-caltulation.flex-start{
+    flex-direction: column;
+    gap: 5px;
+}
+.shopping-cart-caltulation .shipping ul .flex-between span{
+    padding-left:5px;
+    font-size: var(--low-font);
+}
+.shopping-cart-caltulation  p{
+    font-weight: 600;
+}
+.shopping-cart-caltulation .hr{
+    width: 100%;
+}
+.shopping-cart-caltulation .flex-between h5{
+    font-size: var(--lg-font);
+}
+
+
+
+
+
+/* =============  Britcamps Section Start Here  ============== */
+.britcamps-content-area ul.flex-start{
+    gap: 10px;
+}
+.britcamps-content-area ul li a{
+    color: var(--primary-color);
+    font-size: var(--xs-font);
+}
+.britcamps-content-area ul li a:hover{
+    color: var(--grey-color);
+}
+.britcamps-content-area ul li:last-child a{
+    color: var(--grey-color);
+}
+/* =============  Britcamps Section End Here  ============== */
+
+
 
 
 
