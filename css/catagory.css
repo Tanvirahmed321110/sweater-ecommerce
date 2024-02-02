@@ -1,5 +1,7 @@
 
-
+.catagory-area.flex-between{
+    gap: 50px;
+}
 .catagory-filter{
     width: 30%;
 }
@@ -83,4 +85,131 @@
 /* price-range */
 .price-range .flex-between{
     margin-top: -20px;
+}
+
+
+
+
+
+/* ================  catagory-show-items-area  ================== */
+.catagory-show-items-area{
+    width: 70%;
+}
+.catagory-show-items-right{
+    width: 200px;
+}
+.catagory-show-items-right.flex-between{
+    align-items: flex-start;
+}
+
+
+/* catagory-dropdown-btn */
+#catagory-dropdown-btn{
+    cursor: pointer;
+}
+.catagory-dropdown{
+    position: relative;
+}
+.drop-bottom{
+    height: 0px;
+    visibility: hidden;
+    transition:height .3s linear;
+    position: absolute;
+    top: 45px;
+    left: 0;
+}
+.catagory-dropdown ul{
+    width: 100px;
+    background-color: var(--white-color);
+    box-shadow: var(--box-shadow);
+    margin-top: -10px;
+    padding: 0 5px;
+}
+.drop-bottom.active{
+    visibility: visible;
+    transition:height .3s linear;
+    height: 130px;
+    z-index: 2;
+}
+.catagory-dropdown ul li{
+    border-bottom: var(--border-1);   
+}
+.catagory-dropdown ul li a{
+    font-size: var(--xs-font);
+}
+#flash{
+    display: none;
+}
+
+@media (max-width:766px){
+    .catagory-area.flex-between {
+        gap: 0px;
+    }
+    
+    .filter-items.flex-column-15 {
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .filter-item ul {
+        overflow-y: auto;
+        height: 150px;
+        display: none;
+        animation: fade-bottom .3s linear;
+    }
+    .filter-item .colors .color {
+        width: 25px;
+        height: 25px;
+    }
+    .filter-item .sizes button {
+        padding: 1px 10px;
+        border: var(--border-1);
+        border-radius: 4px;
+        margin-right: 5px;
+        background-color: transparent;
+    }
+    
+    
+    /* .catagory-filter */
+    .catagory-filter{
+        position: fixed;
+        transition: .4s linear;
+        background-color: var(--white-color);
+        box-shadow: var(--box-shadow);
+        left:-100%;
+        padding:15px;
+        z-index: -1;
+        top: 0;
+        height: 100vh;
+    }
+    .catagory-filter.active{
+        display: block;
+        z-index: 3;
+        width: 350px;
+        left: 0;
+    }
+    .catagory-show-items-area{
+        width: 100%;
+    }
+    #flash{
+        display: block;
+        position: fixed;
+        top: 50%;
+        background-color: black;
+        padding: 5px;
+        z-index: 6;
+        left: 0;
+        border: 2px solid white;
+        border-radius: 50%;
+        width: 45px;
+        text-align: center;
+        height: 45px;
+        transform: translateY(-50%);
+    }
+    #flash:hover{
+        background-color: orangered;
+    }
+    #flash i{
+        color:var(--white-color);
+        font-size: var(--lg-font);
+    }
 }

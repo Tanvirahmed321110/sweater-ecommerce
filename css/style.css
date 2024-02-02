@@ -296,9 +296,6 @@ section{
 
 
 /* ========================  shopping-cart   ======================== */
-.card{
-    overflow-x: hidden;
-}
 .shopping-cart{
     max-width: 400px;
     width: 100%;
@@ -306,7 +303,7 @@ section{
     background-color: var(--white-color);
     box-shadow: var(--box-shadow);
     border: var(--border-1);
-    position: absolute;
+    position: fixed;
     right: -100%;
     top: 0px;
     z-index: 5;
