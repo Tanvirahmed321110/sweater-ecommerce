@@ -125,17 +125,7 @@ const swiper = new Swiper('.slider-top', {
   })
   
   
-  // write-a-review
-  const writeReviewBox = document.getElementById('write-a-review')
-  const writeReviewBtn = document.getElementById('open-write-a-review')
-  const closeReviewBoxBtn = document.getElementById('write-a-review-close')
   
-  writeReviewBtn.addEventListener('click',()=>{
-    writeReviewBox.classList.add('active')
-  })
-  closeReviewBoxBtn.addEventListener('click',()=>{
-    writeReviewBox.classList.remove('active')
-  })
   
   
   // sliders  arrivals
@@ -172,7 +162,17 @@ const swiper = new Swiper('.slider-top', {
   
   });
   
+// write-a-review
+const writeReviewBox = document.getElementById('write-a-review')
+const writeReviewBtn = document.getElementById('open-write-a-review')
+const closeReviewBoxBtn = document.getElementById('write-a-review-close')
 
+writeReviewBtn.addEventListener('click',function(){
+  writeReviewBox.classList.add('active')
+})
+closeReviewBoxBtn.addEventListener('click',()=>{
+  writeReviewBox.classList.remove('active')
+})
   
   
   
