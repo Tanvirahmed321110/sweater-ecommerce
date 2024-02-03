@@ -182,6 +182,7 @@
     border-radius: 5px;
     border: var(--border-1);
     resize: none;
+    color: wheat;
 }
 
 

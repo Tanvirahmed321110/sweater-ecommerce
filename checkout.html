@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product_Page</title>
+    <title>Checkoout_Page</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/cart-page.css">
+    <link rel="stylesheet" href="css/cart-page-2.css">
+    <link rel="stylesheet" href="css/checkout.css">
 </head>
 <body>
     <div class="homg-page">
@@ -368,7 +369,7 @@
                         <div class="britcamps-content-area">
                             <ul class="flex-start">
                                 <li><a href="index.html">Home <span> <i class="ri-arrow-right-s-line"></i> </span></a></li>
-                                <li><a href="#">cart <span>  </span></a></li>
+                                <li><a href="#">checkout <span>  </span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -378,149 +379,181 @@
             
             
             
-            <!--============== cart section end here =============== -->
+            <!--============== checkout  section start here =============== -->
             <section>
-                <div class="cart">
-                    <div class="">
-                        <div class="cart-area">
-                            <!-- cart main header -->
-                            <div class="cart-header">
-                                <div class="section-header-area">
-                                    <h1 class="section-header">Cart</h1>
+                <div class="checkout">
+                    <div class="container">
+                        <div class="checkout-area flex-between">
+                            <!-- address area start  -->
+                            <div class="checkout-address">
+                                <div class="checkotu-address-area ">
+                                    <div class="section-header-area">
+                                        <h4 class="section-header">Shipping Address</h4>
+                                    </div>
+                                    <div class="checkout-address-items flex-column-15 w-100">
+                                        <div class="w-100 flex-column-15">
+                                            <div class="checkout-addres-item">
+                                                <label for="#">Name</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="checkout-addres-item">
+                                                <label for="#">Email</label>
+                                                <input type="email">
+                                            </div>
+                                            <div class="checkout-addres-item">
+                                                <label for="#">Phone</label>
+                                                <input type="number">
+                                            </div>
+                                        </div>
+                                        <div class="w-100 flex-column-15">
+                                            <div class="checkout-item w-100">
+                                                <div><label for="#">Country</label></div>
+                                                <select name="" id="">
+                                                    <option value="">Bangladesh</option>
+                                                    <option value="">Pakistan</option>
+                                                    <option value="">Nepal</option>
+                                                </select>
+                                            </div>
+                                            <div class="checkout-addres-item">
+                                                <label for="#">Street Address</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="checkout-addres-item">
+                                                <label for="#">City</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="checkout-addres-item">
+                                                <label for="#">Zip Code</label>
+                                                <input type="number">
+                                            </div>
+                                            <div class="checkout-addres-item">
+                                                <input type="radio">
+                                                <label for="#">create account</label>
+                                            </div>
+                                            <div class="checkout-addres-item">
+                                                <a href="" class="btn-fill">Submit </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- address area end  -->
                             
-                            <div class="cart-items flex-between">
-                                <!-- ---------  cart items left site start  --------- -->
-                                <div class="cart-items-left w-50">
-                                    <div class="cart-items-header">
-                                        <div class="cart-item-left  s flex-center">
-                                            <div class="cart-item-image">
-                                                
-                                            </div>
-                                            <div class="cart-item-data">
-                                                <h5>PRODUCTS</h5>
-                                            </div>
+                            
+                            
+                        <!-- select items  -->
+                            <div class="select-payout">
+                                <div class="select-items">
+                                    <div class="cart-page-item-left  flex-center">
+                                        <div class="cart-page-item-image">
+                                            <img src="assets/assets/blog_01.jpg" alt="">
+                                        </div>
+                                        <div class="cart-page-item-left-data">
+                                            <h5>The Sweater in Tosca Gray</h5>
+                                            <p>Color: <span>Gray</span></p>
+                                            <p>Size: <span>L</span></p>
                                         </div>
                                     </div>
-                                    <!-- cart-items-left-body -->
-                                    <div class="cart-items-left-body flex-column-25">
-                                        <!-- single cart item left start  -->
-                                        <div class="cart-item-left flex-center">
-                                            <div class="cart-item-image">
-                                                <img src="assets/assets/blog_01.jpg" alt="">
-                                            </div>
-                                            <div class="cart-item-data">
-                                                <h5>The Sweater in Tosca Gray</h5>
-                                                <p>Color: Gray</p>
-                                                <p>Size: L</p>
-                                            </div>
+                                    <div class="cart-page-item-left flex-center">
+                                        <div class="cart-page-item-image">
+                                            <img src="assets/assets/blog_01.jpg" alt="">
                                         </div>
-                                        <!-- single cart item left end  -->
-                                        <!-- single cart item left start  -->
-                                        <div class="cart-item-left flex-center">
-                                            <div class="cart-item-image">
-                                                <img src="assets/assets/blog_01.jpg" alt="">
-                                            </div>
-                                            <div class="cart-item-data">
-                                                <h5>The Sweater in Tosca Gray</h5>
-                                                <p>Color: Gray</p>
-                                                <p>Size: L</p>
-                                            </div>
+                                        <div class="cart-page-item-left-data">
+                                            <h5>The Sweater in Tosca Gray</h5>
+                                            <p>Color: <span>Gray</span></p>
+                                            <p>Size: <span>L</span></p>
                                         </div>
-                                        <!-- single cart item left end  -->
-                                        <!-- single cart item left start  -->
-                                        <div class="cart-item-left flex-center">
-                                            <div class="cart-item-image">
-                                                <img src="assets/assets/blog_01.jpg" alt="">
-                                            </div>
-                                            <div class="cart-item-data">
-                                                <h5>The Sweater in Tosca Gray</h5>
-                                                <p>Color: Gray</p>
-                                                <p>Size: L</p>
-                                            </div>
+                                    </div>
+                                    <div class="cart-page-item-left flex-center">
+                                        <div class="cart-page-item-image">
+                                            <img src="assets/assets/blog_01.jpg" alt="">
                                         </div>
-                                        <!-- single cart item left end  -->
+                                        <div class="cart-page-item-left-data">
+                                            <h5>The Sweater in Tosca Gray</h5>
+                                            <p>Color: <span>Gray</span></p>
+                                            <p>Size: <span>L</span></p>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- ---------  cart items left site end  --------- -->
                                 
                                 
-                                
-                                
-                                <!-- ---------  cart items right site start  --------- -->
-                                <div class="cart-items-right w-50">
-                                    <div class="cart-items-header">
-                                        <div class="flex-start cart-item-right">
-                                            <div><h5>PRICE</h5></div>
-                                            <div><h5>OTY</h5></div>
-                                            <div><h5>TOTAL</h5></div>
-                                            <div></div>
+                                    
+                                <!-- select payout -->
+                                <div class="select-payout">
+                                    <div class="select-payout-area flex-column-15">
+                                        <div class="select-payout-header">
+                                            <h5>Select Payout</h5>
                                         </div>
-                                    </div>
-                                    <div class="cart-items-right-body">
-                                        <!-- single item cart right start -->
-                                        <div class="cart-item-right">
-                                            <div>
-                                                <h5>$45.00</h5> 
+                                        <div>
+                                            <ul class="flex-start">
+                                                <li><a href="#">Bikash</a></li>
+                                                <li><a href="#">Nogod</a></li>
+                                                <li><a href="#">Bank</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="coupon w-100">
+                                            <input type="text" placeholder=" COUPON">
+                                            <button class="btn-fill">APPLY</button>
+                                        </div>
+                                        
+                                        <div class="w-100">
+                                            <div class="calculation-item flex-between">
+                                                <p>Subtitle</p>
+                                                <p>$45.00</p>
                                             </div>
-                                            <div class="flex-center cart-item-right-btn">
-                                                <button>-</button>
-                                                <input type="number" value="1">
-                                                <button>+</button>
+                                            <div class="calculation-item ">
+                                                <p>Shipping</p>
+                                                <div class="shipping-option">
+                                                    <div class="flex-between">
+                                                        <div>
+                                                            <input name="free" type="radio">
+                                                            <small>Free</small>
+                                                        </div>
+                                                        <div>
+                                                            <p>$0.00</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-between">
+                                                        <div>
+                                                            <input name="free" type="radio">
+                                                            <small>Flat</small>
+                                                        </div>
+                                                        <div>
+                                                            <p>$5.00</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <h5>$45.00</h5> 
+                                            <div class="calculation-item flex-between">
+                                                <p>Discount</p>
+                                                <p>$0.00</p>
                                             </div>
-                                            <div class="close-btn">
-                                                <button>X</button>
+                                            <div class="calculation-item flex-between">
+                                                <p>Tax</p>
+                                                <p>$15.00</p>
+                                            </div>
+                                            <hr class="hr"> 
+                                            
+                                            <div class="total flex-between">
+                                                <h4>Total</h4>
+                                                <h3>$145.00</h3>
+                                            </div>
+                                            
+                                            <!-- confirm shop -->
+                                            <div class="confirm">
+                                                <button class="btn-fill">Confirm</button>
                                             </div>
                                         </div>
-                                        <!-- single item cart right end -->
-                                        <!-- single item cart right start -->
-                                        <div class="cart-item-right">
-                                            <div>
-                                                <h5>$45.00</h5> 
-                                            </div>
-                                            <div class="flex-center cart-item-right-btn">
-                                                <button>-</button>
-                                                <input type="number" value="1">
-                                                <button>+</button>
-                                            </div>
-                                            <div>
-                                                <h5>$45.00</h5> 
-                                            </div>
-                                            <div class="close-btn">
-                                                <button>X</button>
-                                            </div>
-                                        </div>
-                                        <!-- single item cart right end -->
-                                        <!-- single item cart right start -->
-                                        <div class="cart-item-right">
-                                            <div>
-                                                <h5>$45.00</h5> 
-                                            </div>
-                                            <div class="flex-center cart-item-right-btn">
-                                                <button>-</button>
-                                                <input type="number" value="1">
-                                                <button>+</button>
-                                            </div>
-                                            <div>
-                                                <h5>$45.00</h5> 
-                                            </div>
-                                            <div class="close-btn">
-                                                <button>X</button>
-                                            </div>
-                                        </div>
-                                        <!-- single item cart right end -->
                                     </div>
                                 </div>
-                                <!-- ---------  cart items right site end  --------- -->
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <!--============== checkout  section end here =============== -->
+        
+            
         </menu>
         
         

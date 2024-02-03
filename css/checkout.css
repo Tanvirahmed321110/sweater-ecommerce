@@ -1,0 +1,146 @@
+
+
+.checkout-address{
+    width: 35%;
+}
+.checkout-area.flex-between{
+    gap: 100px;
+}
+.checkout-address-items{
+    padding: 4px ;
+    font-size: var(--sm-font);
+}
+.checkout-address-items.flex-column-15{
+    align-items: flex-start;
+    gap: 25px;
+}
+.checkout-address-items .flex-colurm-15{
+    gap: 25px;
+}
+.checkout-address-items .checkout-addres-item{
+    width: 100%;
+}
+.checkout-address-items select{
+    width: 100%;
+    padding: 10px 10px;
+    outline: none;
+    border: var(--border-1);
+    font-size: var(--sm-font);
+}
+
+.checkout-address-items .checkout-addres-item input{
+    border:var(--border-1);
+    border-radius: 2px;
+    padding: 6px 10px;
+}
+.checkout-address-items .checkout-addres-item input:focus{
+    border: 1px solid var(--light-color);
+}
+.checkout-address-items .checkout-addres-item label{
+    font-weight: 500;
+}
+.checkotu-address-area .section-header{
+    text-align: left;
+}
+.checkout-address-items .btn-fill{
+    background-color: var(--dark-color);
+}
+.checkout-address-items .btn-fill:hover{
+    background-color: var(--grey-color);
+}
+
+/* select-items */
+.select-payout-area.flex-column-15{
+    align-items: flex-start;
+    gap: 20px;
+}
+.select-payout{
+    flex-grow: 1;
+}
+.select-items{
+    flex-grow: 1;
+    background-color: var(--white-medium);
+    padding-left: 100px;
+}
+.select-items .cart-page-item-left {
+    padding: 10px;
+}
+
+
+/* select-payout */
+.select-payout{
+    background-color: var(--dark-color);
+}
+.select-payout-area{
+    width: 400px;
+    padding: 15px;
+    color: var(--light-color);
+    padding-left: 100px;
+}
+.select-payout-header h5{
+    font-size: var(--md-font);
+}
+.select-payout-area ul li a{
+    border-bottom: 1px solid var(--light-color);
+    font-size: var(--xs-font);
+}
+
+
+
+/* coupon code  */
+.select-payout .coupon{
+    position: relative;
+}
+.select-payout .coupon input{
+    border-radius: 3px;
+    background-color: var(--light-color);
+    width: 100%;
+}
+.select-payout .coupon button{
+    position: absolute;
+    right: 2px;
+    width: 80px;
+    top: 2px;
+}
+.shipping-option{
+    padding-left: 15px;
+}
+
+
+.hr{
+    margin: 15px 0;
+    height: 1px;
+    width: 100%;
+}
+
+.total h3{
+    color:var(--white-color) ;
+}
+
+/* confirm btn */
+.confirm{
+    padding: 10px 0;
+}
+.confirm .btn-fill {
+    border:1px solid var(--light-color);
+}
+
+
+
+/* ========== responsive =========== */
+@media (max-width:766px){
+    .checkout-address{
+        width: 100%;
+    }
+    .checkout-area.flex-between {
+        gap: 10px;
+        flex-direction: column;
+    }
+    .select-items {
+        padding-left: 10px;
+    }
+    .select-payout-area {
+        width: 100%;
+        padding-left: 26px;
+    }
+}
