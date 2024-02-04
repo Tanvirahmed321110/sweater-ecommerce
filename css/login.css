@@ -1,0 +1,135 @@
+
+
+
+.account-form-area{
+    width: 420px;
+    box-shadow: var(--box-shadow);
+    padding: 25px 25px;
+    font-size: var(--xs-font);
+    border: var(--border-1);
+    border-radius: 12px;
+    background-color: var(--white-color);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+#login-form,#register-form{
+    width: 100%;
+    transition: .6s;
+}
+.account-form-area.flex-column-25{
+    gap: 30px;
+}
+.account-form-body input{
+    border: var(--border-1);
+}
+.account-form-area input:focus{
+    border: 1px solid var(--primary-color);
+}
+/* account-form-top */
+.account-form-top .flex-center{
+    gap: 30px;
+}
+.account-form-top p{
+    font-weight: 700;
+    font-size: var(--md-font);
+    color: #563434;
+    cursor: pointer;
+}
+
+#indicator{
+    width: 75px;
+    background-color: #ff523b;
+    height: 3px;
+    margin-top: 1px;
+    transform: translateX(80px);
+    transition:all .5s linear;
+}
+
+
+/* login-form */
+#login-form{
+    left:25px;
+    transform: translateX(-500px);
+    position: absolute;
+    padding: 25px;
+}
+#login-form .user-icon img{
+    width: 70px;
+}
+#login-form form a{
+    text-decoration: underline;
+    color: blueviolet;
+    width: auto !important;
+}
+#login-form form a:hover{
+    color: var(--grey-color);
+}
+.remember-me.flex-start{
+    gap: 8px;
+    align-items: center;
+    color: blueviolet;
+}
+
+
+/* register-form */
+#register-form{
+    transform: translateX(0px);
+}
+.left-border{
+    width: 100%;
+    border-top: 1px solid khaki;
+}
+.right-border{
+    width: 100%;
+    border-top: 1px solid khaki;
+}
+
+.or-btn button{
+    margin-top: 8px;
+}
+
+
+
+/* modal  */
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: #563434;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.modal.active{
+    display: block;
+}
+
+.modal-area{
+    width: 400px;
+    height: 400px;
+    padding: 25px;
+    background-color:wheat;
+}
+.modal-area .text-right button{
+    padding: 2px 9px;
+}
+
+
+
+
+@media (max-width:770px){
+    .account-area.flex-between{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .account-image{
+        order: 2;
+    }
+    .account-image.w-50{
+        width: 100%;
+    }
+    .account-form-area{
+        margin: 0 auto;
+    }
+}
